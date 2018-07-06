@@ -93,7 +93,7 @@ body {
 .input-group {
   position: relative;
   padding: 1rem 2rem 2rem 2rem;
-  margin: 0 1rem 1rem 1rem;
+  margin: 0 1rem 2rem 1rem;
   transition: opacity 0.3s ease-in-out;
 
   input {
@@ -109,11 +109,16 @@ body {
     background: transparent;
     box-shadow: none;
     color: $light;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 
     &:focus {
       border-bottom: 1px solid $primary;
     }
+  }
+  .invalid-feedback {
+    color: $error;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
   }
 }
 

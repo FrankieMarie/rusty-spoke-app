@@ -9,6 +9,7 @@ const shifts = require('./routes/api/shifts')
 const customers = require('./routes/api/customers')
 const purchases = require('./routes/api/purchases')
 const comments = require('./routes/api/comments')
+const visits = require('./routes/api/currentVisits')
 
 const app = express()
 
@@ -37,6 +38,7 @@ app.use('/api/shifts', shifts)
 app.use('/api/customers', customers)
 app.use('/api/purchases', purchases)
 app.use('/api/comments', comments)
+app.use('/api/visits', visits)
 
 const port = process.env.PORT || 5000
 

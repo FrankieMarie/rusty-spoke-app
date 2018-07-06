@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import jwt_decode from 'jwt-decode'
+import setAuthToken from './utils/setAuthToken'
+import { setUser } from './redux/actions/authActions'
 import { Provider } from 'react-redux'
 import store from './redux/store'
 
@@ -15,7 +18,11 @@ import Staff from './components/Staff'
 import RegisterStaff from './components/RegisterStaff'
 import Shifts from './components/Shifts'
 
-
+if(localStorage.jwtToken) {
+  setAuthToken(localStorage.jwtToken)
+  const decoded = jwt_decode(localStorage.jwtToken)
+  store.dispatch(setUser(decoded))
+}
 
 class App extends Component {
   render() {

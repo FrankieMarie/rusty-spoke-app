@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const passport = require('passport')
+const cors = require('cors')
 
 const user = require('./routes/api/user')
 const staff = require('./routes/api/staff')
@@ -12,6 +13,9 @@ const comments = require('./routes/api/comments')
 const visits = require('./routes/api/currentVisits')
 
 const app = express()
+
+// Allow cross origin requests
+app.use(cors())
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }))

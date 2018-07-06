@@ -9,12 +9,18 @@ const passport = require('passport')
 const User = require('../../models/User')
 
 // Validation
+const validateRegisterUserInput = require('../../validation/registerUser')
 const validateLoginInput = require('../../validation/login')
 
 // @route     POST api/user/register
 // @desc      Register user/admin
 // @access    Public
 router.post('/register', (req, res) => {
+  const { errors, isValid } = validateRegisterUserInput(req.body)
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
+
   User.findOne({ email: req.body.email })
     .then(user => {
       if(user) {
@@ -41,10 +47,7 @@ router.post('/register', (req, res) => {
 // @desc      Login user/admin
 // @access    Public
 router.post('/login', (req, res) => {
-  const {
-    errors,
-    isValid
-  } = validateLoginInput(req.body)
+  const { errors, isValid } = validateLoginInput(req.body)
   if (!isValid) {
     return res.status(400).json(errors)
   }

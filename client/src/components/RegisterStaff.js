@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { registerStaff } from '../redux/actions/staffActions'
 
 class RegisterStaff extends Component {
   state = {
@@ -15,9 +17,7 @@ class RegisterStaff extends Component {
       email: this.state.email,
       phone: this.state.phone
     }
-    axios.post('/api/staff', newUser)
-      .then(res => console.log(res.data))
-      .catch(err => console.log(err));
+    this.props.registerStaff(newUser)
   }
 
   render() {
@@ -49,4 +49,8 @@ class RegisterStaff extends Component {
   }
 }
 
-export default RegisterStaff
+RegisterStaff.propTypes = {
+  registerStaff: PropTypes.func.isRequired
+}
+
+export default connect(null, { registerStaff })(RegisterStaff)

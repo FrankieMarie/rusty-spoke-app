@@ -6,7 +6,7 @@ const passport = require('passport')
 const Staff = require('../../models/Staff')
 
 // Validation
-const validateRegisterInput = require('../../validation/register')
+const validateRegisterStaffInput = require('../../validation/registerStaff')
 
 // @route     GET api/staff/all
 // @desc      Get all staff members
@@ -33,7 +33,7 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
   const {
     errors,
     isValid
-  } = validateRegisterInput(req.body)
+  } = validateRegisterStaffInput(req.body)
   if (!isValid) {
     return res.status(400).json(errors)
   }

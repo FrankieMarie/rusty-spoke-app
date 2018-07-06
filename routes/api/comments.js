@@ -7,6 +7,9 @@ const Comment = require('../../models/Comment')
 const Customer = require('../../models/Customer')
 const Staff = require('../../models/Staff')
 
+// Validation
+const validateCommentInput = require('../../validation/comment')
+
 // @route     GET api/comments/all
 // @desc      Get all comments
 // @access    Private
@@ -22,6 +25,13 @@ router.get('/all', passport.authenticate('jwt', { session: false }), (req, res) 
 // @desc      Post a comment
 // @access    Private
 router.post('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+  const {
+    errors,
+    isValid
+  } = validateCommentInput(req.body)
+  if (!isValid) {
+    return res.status(400).json(errors)
+  }
   const comment = new Comment({
     resourceType: req.body.resourceType,
     resource: req.body.resource,

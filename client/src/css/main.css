@@ -28,7 +28,7 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(34, 32, 34, 0.9);
+  background-color: rgba(34, 32, 34, 0.95);
   min-width: 400px;
   border-radius: 1rem;
   text-align: center; }
@@ -43,15 +43,16 @@ body {
 
 .login-btn {
   text-transform: uppercase;
-  background-color: #ceccce;
-  color: #4c4947;
+  background-color: #62cd8b;
+  color: #222022;
   padding: 10px 20px;
   display: inline-block;
   cursor: pointer;
   margin-top: 1rem;
   border-radius: 100px;
   transition: all .2s;
-  position: relative; }
+  position: relative;
+  border: none; }
   .login-btn:hover {
     transform: translateY(-3px); }
   .login-btn::after {
@@ -60,7 +61,7 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 100px;
-    background-color: #ceccce;
+    background-color: #62cd8b;
     position: absolute;
     top: 0;
     left: 0;
@@ -90,7 +91,7 @@ body {
     color: #ceccce;
     margin-bottom: 2rem; }
     .input-group input:focus {
-      border-bottom: 1px solid #6ead3a; }
+      border-bottom: 1px solid #62cd8b; }
 
 /* Dashboard */
 /* Navbar */

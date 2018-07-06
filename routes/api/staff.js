@@ -5,6 +5,9 @@ const passport = require('passport')
 // Model
 const Staff = require('../../models/Staff')
 
+// Validation
+const validateRegisterInput = require('../../validation/register')
+
 // @route     GET api/staff/all
 // @desc      Get all staff members
 // @access    Private
@@ -27,6 +30,14 @@ router.get('/:id', passport.authenticate('jwt', { session: false }), (req, res) 
 // @desc      Register staff member
 // @access    Private
 router.post('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+  const {
+    errors,
+    isValid
+  } = validateRegisterInput(req.body)
+  if (!isValid) {
+    return res.status(400).json(errors)
+  }
+
   Staff.findOne({ email: req.body.email })
     .then(staff => {
       if(staff) {

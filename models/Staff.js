@@ -11,7 +11,8 @@ const StaffSchema = new Schema({
     required: true
   },
   phone: {
-    type: Number
+    type: Number,
+    required: true
   },
   date: {
     type: Date,

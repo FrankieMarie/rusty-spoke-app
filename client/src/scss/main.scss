@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto");
 @import url('https://fonts.googleapis.com/css?family=Bad+Script');;
 
-$primary: #6ead3a;
+$primary: #62cd8b;
 $secondary: #4c4947;
 $background: #efedef;
 $dark: #222022;
@@ -40,7 +40,7 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba($color: rgb(34, 32, 34), $alpha: 0.9);
+  background-color: rgba($color: rgb(34, 32, 34), $alpha: 0.95);
   min-width: 400px;
   border-radius: 1rem;
   text-align: center;
@@ -57,8 +57,8 @@ body {
 
 .login-btn {
   text-transform: uppercase;
-  background-color: $light;
-  color: $secondary;
+  background-color: $primary;
+  color: $dark;
   padding: 10px 20px;
   display: inline-block;
   cursor: pointer;
@@ -66,6 +66,7 @@ body {
   border-radius: 100px;
   transition: all .2s;
   position: relative;
+  border: none;
 
   &:hover {
     transform: translateY(-3px);
@@ -76,7 +77,7 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 100px;
-    background-color: $light;
+    background-color: $primary;
     position: absolute;
     top: 0;
     left: 0;
@@ -109,12 +110,11 @@ body {
     box-shadow: none;
     color: $light;
     margin-bottom: 2rem;
+
     &:focus {
       border-bottom: 1px solid $primary;
     }
   }
-
-
 }
 
 /* Dashboard */

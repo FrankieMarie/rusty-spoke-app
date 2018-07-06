@@ -7,6 +7,8 @@ const user = require('./routes/api/user')
 const staff = require('./routes/api/staff')
 const shifts = require('./routes/api/shifts')
 const customers = require('./routes/api/customers')
+const purchases = require('./routes/api/purchases')
+const comments = require('./routes/api/comments')
 
 const app = express()
 
@@ -33,6 +35,8 @@ app.use('/api/user', user)
 app.use('/api/staff', staff)
 app.use('/api/shifts', shifts)
 app.use('/api/customers', customers)
+app.use('/api/purchases', purchases)
+app.use('/api/comments', comments)
 
 const port = process.env.PORT || 5000
 

@@ -3,7 +3,7 @@ const router = express.Router()
 const passport = require('passport')
 
 // Model
-const Comment = require('../../models/Comments')
+const Comment = require('../../models/Comment')
 const Customer = require('../../models/Customer')
 const Staff = require('../../models/Staff')
 

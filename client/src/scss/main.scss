@@ -18,6 +18,14 @@ html {
   font-size: 62.5%;
 }
 
+.welcome-h1, .new-shift-h1, .new-visit-h1 {
+  color: $dark;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 3rem;
+  font-size: 4rem;
+}
+
 body {
   background: $background;
   font-family: 'Roboto', sans-serif;
@@ -288,14 +296,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  .welcome-h1 {
-    color: $dark;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    margin-top: 3rem;
-    font-size: 4rem;
-  }
-
   .date-time {
     border: 2px solid $light;
     border-radius: 10px;
@@ -363,5 +363,18 @@ body {
       font-size: 3.5rem;
       color: $secondary;
     }
+  }
+
+  /* New shift */
+  .new-shift-submit, .new-visit-submit {
+    color: $background;
+    letter-spacing: 1px;
+    font-weight: 700;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .new-shift-form, .new-visit-form {
+    margin: 2rem 20rem;
   }
 }

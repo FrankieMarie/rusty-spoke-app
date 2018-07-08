@@ -8,6 +8,13 @@
 html {
   font-size: 62.5%; }
 
+.welcome-h1, .new-shift-h1, .new-visit-h1 {
+  color: #222022;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 3rem;
+  font-size: 4rem; }
+
 body {
   background: #f5f5f5;
   font-family: 'Roboto', sans-serif;
@@ -216,13 +223,8 @@ body {
   min-height: 93vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
-  .content .welcome-h1 {
-    color: #222022;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    margin-top: 3rem;
-    font-size: 4rem; }
+  justify-content: space-between;
+  /* New shift */ }
   .content .date-time {
     border: 2px solid #ceccce;
     border-radius: 10px;
@@ -274,3 +276,11 @@ body {
       margin-bottom: 2rem;
       font-size: 3.5rem;
       color: #4c4947; }
+  .content .new-shift-submit, .content .new-visit-submit {
+    color: #f5f5f5;
+    letter-spacing: 1px;
+    font-weight: 700;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .content .new-shift-form, .content .new-visit-form {
+    margin: 2rem 20rem; }

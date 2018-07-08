@@ -7,7 +7,7 @@ class Dashboard extends Component {
     return (
       <div className="content">
 
-        <h1 className="welcome-h1">Welcome</h1>
+        <h1 className="welcome-h1">Welcome to the spoke!</h1>
 
         <div className="dashboard-btns">
 

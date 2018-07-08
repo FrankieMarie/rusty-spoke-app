@@ -6,5 +6,5 @@ import customerReducer from './customerReducer'
 export default combineReducers({
   auth: authReducer,
   errors: errorReducer,
-  customer: customerReducer
+  customers: customerReducer
 })

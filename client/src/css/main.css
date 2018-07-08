@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto");
 @import url("https://fonts.googleapis.com/css?family=Bad+Script");
-* {
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+*, *::after, *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 
 html {
-  font-size: 10px; }
+  font-size: 62.5%; }
 
 body {
-  background: #efedef;
-  font-family: 'Roboto', sans-serif; }
+  background: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box; }
 
 /* Landing */
 .landing-image {
@@ -29,7 +31,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(34, 32, 34, 0.95);
-  min-width: 400px;
+  min-width: 40rem;
   border-radius: 1rem;
   text-align: center; }
   .login-box .login-h1 {
@@ -97,5 +99,114 @@ body {
     letter-spacing: 1px;
     margin-bottom: 2rem; }
 
-/* Dashboard */
-/* Navbar */
+/* Header */
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: 1px solid #222022;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header .brand {
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 3rem;
+    color: #62cd8b; }
+  .header .search {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .header .search .search-input {
+      font-family: inherit;
+      font-size: 1.4rem;
+      color: inherit;
+      background-color: #f5f5f5;
+      border: none;
+      padding: .7rem 2rem;
+      border-radius: 100px;
+      width: 90%;
+      transition: all .2s;
+      margin-right: -3rem; }
+      .header .search .search-input:focus {
+        outline: none;
+        width: 100%; }
+      .header .search .search-input::-webkit-input-placeholder {
+        color: #ceccce; }
+    .header .search .search-btn {
+      border: none;
+      background-color: #f5f5f5;
+      color: #4c4947; }
+      .header .search .search-btn:focus {
+        outline: none; }
+      .header .search .search-btn:active {
+        transform: translateY(2px); }
+  .header .logout-btn {
+    margin-right: 2rem;
+    color: #222022;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 2px solid #62cd8b;
+    border-radius: 100px;
+    padding: 1rem 2rem; }
+    .header .logout-btn:hover {
+      background-color: #62cd8b; }
+
+/* Dashboard layout */
+.container {
+  display: flex; }
+
+/* Navbar - Sidebar */
+.sidebar {
+  background-color: #222022;
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .sidebar .nav {
+    margin-top: 3.5rem; }
+    .sidebar .nav .link {
+      position: relative;
+      font-size: 1.4rem;
+      color: #f5f5f5;
+      display: block;
+      padding: 2rem 3rem;
+      display: flex;
+      align-items: center; }
+      .sidebar .nav .link:not(:last-child) {
+        margin-bottom: .5rem; }
+      .sidebar .nav .link .nav-link {
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+        z-index: 10; }
+      .sidebar .nav .link .nav-icon {
+        font-size: 1.75rem;
+        width: 1.75rem;
+        margin-right: 2rem;
+        z-index: 10; }
+    .sidebar .nav .link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background-color: #62cd8b;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
+    .sidebar .nav .link:hover::before, .sidebar .nav .link:focus {
+      transform: scaleY(1);
+      width: 100%; }
+  .sidebar .legal-text {
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 1.2rem;
+    margin-bottom: 2rem; }
+
+/* Main content */
+.content {
+  flex: 1;
+  min-height: 93vh; }

@@ -1,39 +1,42 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { logout } from '../redux/actions/authActions'
 
 class Navbar extends Component {
-  onLogoutClick(e) {
-    e.preventDefault()
-    this.props.logout()
-  }
-
-  render() {
+ render() {
     return (
-      <div className="navbar">
-        <h1><Link className="navbar-brand" to="/dashboard">The Rusty Spoke</Link></h1>
-        <div className="nav-links">
+      <nav className="sidebar">
+
+      <div className="nav">
+        <div className="link">
+          <i className="fas fa-users nav-icon"></i>
           <Link className="nav-link" to="/customers">Customers</Link>
+        </div>
+
+        <div className="link">
+          <i className="fas fa-user-check nav-icon"></i>
           <Link className="nav-link" to="/current-visits">Current Visits</Link>
+        </div>
+
+        <div className="link">
+          <i className="fas fa-dollar-sign nav-icon"></i>
           <Link className="nav-link" to="/purchases">Purchases</Link>
+        </div>
+
+        <div className="link">
+          <i class="fas fa-lock nav-icon"></i>
           <Link className="nav-link" to="/holds">Holds</Link>
+        </div>
+
+        <div className="link">
+          <i class="fas fa-comments nav-icon"></i>
           <Link className="nav-link" to="/comments">Comments</Link>
         </div>
-        <a href="/" onClick={this.onLogoutClick.bind(this)}>Logout</a>
       </div>
+
+        <p className="legal-text">&copy; 2018 The Rusty Spoke - Shop App</p>
+      </nav>
     )
   }
 }
 
-Navbar.propTypes = {
-  logout: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
-}
-
-const mapStateToProps = (state) => ({
-  auth: state.auth
-})
-
-export default connect(mapStateToProps, { logout })(Navbar)
+export default Navbar

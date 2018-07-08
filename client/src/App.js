@@ -8,6 +8,8 @@ import store from './redux/store'
 
 // Components
 import Landing from './components/Landing'
+import Header from './components/Header'
+import Navbar from './components/Navbar'
 import Dashboard from './components/Dashboard'
 import Customers from './components/Customers'
 import CurrentVisits from './components/CurrentVisits'
@@ -36,15 +38,21 @@ class App extends Component {
         <Router>
           <div className="App">
             <Route exact path="/" component={Landing} />
-            <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/customers" component={Customers} />
-            <Route exact path="/current-visits" component={CurrentVisits} />
-            <Route exact path="/purchases" component={Purchases} />
-            <Route exact path="/holds" component={Holds} />
-            <Route exact path="/staff" component={Staff} />
-            <Route exact path="/new-staff" component={RegisterStaff} />
-            <Route exact path="/shifts" component={Shifts} />
-            <Route exact path="/comments" component={Comments} />
+            <Header />
+            <main className="container">
+              <Navbar />
+              <div className="content">
+                <Route exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/customers" component={Customers} />
+                <Route exact path="/current-visits" component={CurrentVisits} />
+                <Route exact path="/purchases" component={Purchases} />
+                <Route exact path="/holds" component={Holds} />
+                <Route exact path="/comments" component={Comments} />
+                <Route exact path="/shifts" component={Shifts} />
+                <Route exact path="/staff" component={Staff} />
+                <Route exact path="/new-staff" component={RegisterStaff} />
+              </div>
+            </main>
           </div>
         </Router>
       </Provider>
@@ -52,4 +60,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

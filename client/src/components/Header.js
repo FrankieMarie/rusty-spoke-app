@@ -27,7 +27,7 @@ class Header extends Component {
               className="search-input"
               placeholder="Search"/>
             <button className="search-btn">
-              <i class="fas fa-search"></i>
+              <i className="fas fa-search"></i>
             </button>
           </form>
           <Link

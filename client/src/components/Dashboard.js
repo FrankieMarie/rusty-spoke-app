@@ -1,10 +1,40 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import moment from 'moment'
 
 class Dashboard extends Component {
   render() {
     return (
-      <div>
-       dashboard
+      <div className="content">
+
+        <h1 className="welcome-h1">Welcome</h1>
+
+        <div className="dashboard-btns">
+
+          <div className="btn-container-left">
+          <i class="fas fa-angle-double-down dash-icon"></i>
+            <Link
+              to="/new-shift"
+              className="new-shift-btn">
+              Start Shift
+            </Link>
+          </div>
+
+          <div className="btn-container-right">
+            <i class="fas fa-angle-double-down dash-icon"></i>
+            <Link
+              to="/new-visit"
+              className="new-visit-btn">
+              Create Visit
+            </Link>
+          </div>
+
+        </div>
+
+        <div className="date-time">
+          {moment(Date.now()).format('MMMM D, YYYY, H:mm a')}
+        </div>
+
       </div>
     )
   }

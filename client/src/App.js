@@ -13,12 +13,14 @@ import Navbar from './components/Navbar'
 import Dashboard from './components/Dashboard'
 import Customers from './components/Customers'
 import CurrentVisits from './components/CurrentVisits'
+import NewVisit from './components/NewVisit'
 import Purchases from './components/Purchases'
 import Holds from './components/Holds'
 import Comments from './components/Comments'
+import Shifts from './components/Shifts'
+import NewShift from './components/NewShift'
 import Staff from './components/Staff'
 import RegisterStaff from './components/RegisterStaff'
-import Shifts from './components/Shifts'
 
 if(localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken)
@@ -45,10 +47,12 @@ class App extends Component {
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/customers" component={Customers} />
                 <Route exact path="/current-visits" component={CurrentVisits} />
+                <Route exact path="/new-visit" component={NewVisit} />
                 <Route exact path="/purchases" component={Purchases} />
                 <Route exact path="/holds" component={Holds} />
                 <Route exact path="/comments" component={Comments} />
                 <Route exact path="/shifts" component={Shifts} />
+                <Route exact path="/new-shift" component={NewShift} />
                 <Route exact path="/staff" component={Staff} />
                 <Route exact path="/new-staff" component={RegisterStaff} />
               </div>

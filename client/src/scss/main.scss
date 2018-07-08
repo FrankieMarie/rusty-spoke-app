@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto");
-@import url('https://fonts.googleapis.com/css?family=Bad+Script');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
 
 $primary: #18d369;
 $secondary: #4c4947;
@@ -53,7 +52,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     color: $light;
     letter-spacing: 2px;
-    font-weight: 800;
+    font-weight: 400;
     text-align: center;
   }
 }
@@ -180,6 +179,7 @@ body {
       border: none;
       background-color: $background;
       color: $secondary;
+      cursor: pointer;
 
       &:focus {
         outline: none;
@@ -193,9 +193,10 @@ body {
 
   .logout-btn {
     margin-right: 2rem;
-    color: $dark;
+    color: $primary;
     text-transform: uppercase;
     font-size: 1.2rem;
+    font-weight: 700;
     text-decoration: none;
     border: 2px solid $primary;
     border-radius: 100px;
@@ -283,4 +284,84 @@ body {
 .content {
   flex: 1;
   min-height: 93vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .welcome-h1 {
+    color: $dark;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 3rem;
+    font-size: 4rem;
+  }
+
+  .date-time {
+    border: 2px solid $light;
+    border-radius: 10px;
+    width: 25%;
+    text-align: center;
+    transform: translate(150%, -50%);
+    font-size: 2rem;
+    color: $secondary;
+    padding: 2rem;
+  }
+
+  .dashboard-btns {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.5rem;
+    margin-top: -15rem;
+
+    .btn-container-left {
+      margin-left: 10rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      .new-shift-btn {
+        text-decoration: none;
+        border: 2px solid $primary;
+        border-radius: 100px;
+        padding: 3rem 4rem;
+        background-color: $primary;
+        color: $background;
+        transition: all .2s;
+
+        &:hover {
+          background-color: $background;
+          color: $primary;
+          transform: translateY(5px);
+        }
+      }
+    }
+
+    .btn-container-right {
+      margin-right: 10rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      .new-visit-btn {
+        text-decoration: none;
+        border: 2px solid $primary;
+        border-radius: 100px;
+        padding: 3rem 4rem;
+        color: $primary;
+        transition: all .2s;
+
+        &:hover {
+          background-color: $primary;
+          color: $background;
+          transform: translateY(5px);
+        }
+      }
+    }
+
+    .dash-icon {
+      margin-bottom: 2rem;
+      font-size: 3.5rem;
+      color: $secondary;
+    }
+  }
 }

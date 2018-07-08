@@ -1,2 +1,5 @@
 export const GET_ERRORS = 'GET_ERRORS'
 export const SET_USER = 'SET_USER'
+export const GET_CUSTOMERS = 'GET_CUSTOMERS'
+export const CUSTOMERS_LOADING = 'CUSTOMERS_LOADING'
+export const CUSTOMER_NOT_FOUND = 'CUSTOMER_NOT_FOUND'

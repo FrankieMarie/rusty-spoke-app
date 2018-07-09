@@ -1,4 +1,8 @@
-import { GET_CUSTOMERS, CUSTOMERS_LOADING } from '../actions/types'
+import {
+  GET_CUSTOMERS,
+  CUSTOMERS_LOADING,
+  GET_CUSTOMER_BY_ID
+} from '../actions/types'
 
 const initialState = {
   loading: false
@@ -15,6 +19,12 @@ export default function(state = initialState, action) {
       return {
         ...state,
         customers: action.payload,
+        loading: false
+      }
+    case GET_CUSTOMER_BY_ID:
+      return {
+        ...state,
+        customer: action.payload,
         loading: false
       }
     default:

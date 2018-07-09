@@ -14,6 +14,7 @@ import Header from './components/Header'
 import Navbar from './components/Navbar'
 import Dashboard from './components/Dashboard'
 import Customers from './components/Customers'
+import CustomerById from './components/CustomerById'
 import CurrentVisits from './components/CurrentVisits'
 import NewVisit from './components/NewVisit'
 import Purchases from './components/Purchases'
@@ -49,6 +50,7 @@ class App extends Component {
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 <PrivateRoute exact path="/customers" component={Customers} />
+                <PrivateRoute exact path="/customers/:id" component={CustomerById} />
                 <PrivateRoute exact path="/current-visits" component={CurrentVisits} />
                 <PrivateRoute exact path="/new-visit" component={NewVisit} />
                 <PrivateRoute exact path="/purchases" component={Purchases} />

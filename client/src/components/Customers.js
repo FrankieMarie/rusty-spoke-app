@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getAllCustomers } from '../redux/actions/customerActions'
-import Customer from './structures/Customer'
+import Customer from './layout/Customer'
 
 class Customers extends Component {
   componentDidMount() {

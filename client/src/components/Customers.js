@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getAllCustomers } from '../redux/actions/customerActions'
+import Customer from './structures/Customer'
 
 class Customers extends Component {
   componentDidMount() {
@@ -9,12 +10,12 @@ class Customers extends Component {
   }
 
   render() {
-    const { loading, customers } = this.props.customers
+    const { customers } = this.props.customers
     let allCustomers;
-    if (loading) {
+    if (!customers) {
       allCustomers = <div></div>
     } else {
-      allCustomers = <div>hello</div>
+      allCustomers = customers.map(customer => <Customer key={customer._id} customer={customer} />)
     }
     return (
       <div className="all-customers">

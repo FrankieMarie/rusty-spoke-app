@@ -12,7 +12,7 @@ class Dashboard extends Component {
         <div className="dashboard-btns">
 
           <div className="btn-container-left">
-          <i class="fas fa-angle-double-down dash-icon"></i>
+          <i className="fas fa-angle-double-down dash-icon"></i>
             <Link
               to="/new-shift"
               className="new-shift-btn">
@@ -21,7 +21,7 @@ class Dashboard extends Component {
           </div>
 
           <div className="btn-container-right">
-            <i class="fas fa-angle-double-down dash-icon"></i>
+            <i className="fas fa-angle-double-down dash-icon"></i>
             <Link
               to="/new-visit"
               className="new-visit-btn">

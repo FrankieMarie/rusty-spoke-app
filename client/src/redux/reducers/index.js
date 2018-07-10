@@ -6,6 +6,7 @@ import staffReducer from './staffReducer'
 import commentReducer from './commentReducer'
 import purchaseReducer from './purchaseReducer'
 import shiftReducer from './shiftReducer'
+import currentVisitReducer from './currentVisitReducer'
 
 export default combineReducers({
   auth: authReducer,
@@ -14,5 +15,6 @@ export default combineReducers({
   staff: staffReducer,
   comments: commentReducer,
   purchases: purchaseReducer,
-  shifts: shiftReducer
+  shifts: shiftReducer,
+  visits: currentVisitReducer
 })

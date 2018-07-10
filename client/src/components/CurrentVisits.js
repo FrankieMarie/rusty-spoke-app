@@ -18,6 +18,7 @@ class CurrentVisits extends Component {
     }
     return (
       <div>
+        <h1 className="visits-h1">Current Visits</h1>
         {allVisits}
       </div>
     )

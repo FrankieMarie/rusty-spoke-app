@@ -20,6 +20,7 @@ class Staff extends Component {
     }
     return (
       <div>
+        <h1 className="staff-h1">Staff</h1>
         {allStaff}
         <Link to="/new-staff" >New Staff</Link>
       </div>

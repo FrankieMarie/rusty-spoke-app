@@ -20,6 +20,7 @@ class Holds extends Component {
     }
     return (
       <div>
+        <h1 className="holds-h1">Holds</h1>
         {allHolds}
       </div>
     )

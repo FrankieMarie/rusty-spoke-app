@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getAllComments } from '../redux/actions/commentActions'
 import Comment from './layout/Comment'
+import PostComment from './add-new-forms/PostComment'
 
 class Comments extends Component {
   componentDidMount() {
@@ -18,7 +19,11 @@ class Comments extends Component {
     }
     return (
       <div>
+        <h1 className="comments-h1">Comments</h1>
         {allComments}
+        <footer className="comments-footer">
+          <PostComment />
+        </footer>
       </div>
     )
   }

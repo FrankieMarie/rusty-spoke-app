@@ -18,6 +18,7 @@ class Shifts extends Component {
     }
     return (
       <div>
+        <h1 className="shifts-h1">Shifts</h1>
         {allShifts}
       </div>
     )

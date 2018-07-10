@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getAllCustomers } from '../redux/actions/customerActions'
 import Customer from './layout/Customer'
+import { Link } from 'react-router-dom'
 
 class Customers extends Component {
   componentDidMount() {
@@ -19,7 +20,16 @@ class Customers extends Component {
     }
     return (
       <div className="all-customers">
+        <h1 className="customers-h1">Customers</h1>
         {allCustomers}
+        <footer className="customers-footer">
+          <Link
+            to="/customers-new"
+            className="new-customer-link"
+          >
+            <i className="fas fa-user-plus"></i> Add New Customer
+          </Link>
+        </footer>
       </div>
     )
   }

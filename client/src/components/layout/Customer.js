@@ -8,6 +8,7 @@ class Customer extends Component {
       <div>
         <h2><Link to={`/customers/${_id}`}> {name} </Link></h2>
         <Link to="/new-visit">Create new visit</Link>
+        <Link to={`/customers/holds/${_id}`}>Create a hold</Link>
         <button>Edit</button>
         <button>Delete</button>
       </div>

@@ -18,7 +18,16 @@ html {
   font-size: 62.5%;
 }
 
-.welcome-h1, .new-shift-h1, .new-visit-h1 {
+.welcome-h1,
+.new-shift-h1,
+.new-visit-h1,
+.customers-h1,
+.shifts-h1,
+.visits-h1,
+.purchases-h1,
+.holds-h1,
+.comments-h1,
+.staff-h1 {
   color: $dark;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;

@@ -18,6 +18,7 @@ class Purchases extends Component {
     }
     return (
       <div>
+        <h1 className="purchases-h1">Purchases</h1>
         {allPurchases}
       </div>
     )

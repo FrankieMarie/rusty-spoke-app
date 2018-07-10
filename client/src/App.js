@@ -16,14 +16,16 @@ import Dashboard from './components/Dashboard'
 import Customers from './components/Customers'
 import CustomerById from './components/CustomerById'
 import CurrentVisits from './components/CurrentVisits'
-import NewVisit from './components/NewVisit'
 import Purchases from './components/Purchases'
 import Holds from './components/Holds'
 import Comments from './components/Comments'
 import Shifts from './components/Shifts'
-import NewShift from './components/NewShift'
 import Staff from './components/Staff'
-import RegisterStaff from './components/RegisterStaff'
+// "Add New" Forms
+import RegisterStaff from './components/add-new-forms/RegisterStaff'
+import NewShift from './components/add-new-forms/NewShift'
+import NewVisit from './components/add-new-forms/NewVisit'
+import NewCustomer from './components/add-new-forms/NewCustomer'
 
 if(localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken)
@@ -51,6 +53,7 @@ class App extends Component {
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 <PrivateRoute exact path="/customers" component={Customers} />
                 <PrivateRoute exact path="/customers/:id" component={CustomerById} />
+                <PrivateRoute exact path="/customers-new" component={NewCustomer} />
                 <PrivateRoute exact path="/current-visits" component={CurrentVisits} />
                 <PrivateRoute exact path="/new-visit" component={NewVisit} />
                 <PrivateRoute exact path="/purchases" component={Purchases} />

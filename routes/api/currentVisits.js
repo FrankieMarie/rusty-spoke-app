@@ -33,11 +33,11 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
 
   const visit = new CurrentVisit({
     customer: req.body.customer,
-    toolbox: req.body.item,
-    reason: req.body.description,
+    toolbox: req.body.toolbox,
+    reason: req.body.reason,
     worktrade: req.body.worktrade,
-    arrived: req.body.costHours,
-    departed: req.body.costCash
+    arrived: req.body.arrived,
+    departed: req.body.departed
   })
   visit.save()
     .then(visit => res.json(visit))

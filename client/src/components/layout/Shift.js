@@ -12,10 +12,10 @@ class Shift extends Component {
         <p>Float End: {floatEnd}</p>
         <div className="shift-staff">
           <p>Staff:</p>
-          <p>{staff[0].one.name}</p>
-          {staff[0].two ? <p>{staff[0].two.name}</p> : null}
-          {staff[0].three ? <p>{staff[0].three.name}</p> : null}
-          {staff[0].four ? <p>{staff[0].four.name}</p> : null}
+          <p><i className="fas fa-angle-right"></i> {staff[0].one.name}</p>
+          {staff[0].two ? <p><i className="fas fa-angle-right"></i> {staff[0].two.name}</p> : null}
+          {staff[0].three ? <p><i className="fas fa-angle-right"></i> {staff[0].three.name}</p> : null}
+          {staff[0].four ? <p><i className="fas fa-angle-right"></i> {staff[0].four.name}</p> : null}
         </div>
       </div>
     )

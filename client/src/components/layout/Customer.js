@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 class Customer extends Component {
   render() {
     const { name, _id } = this.props.customer
-    console.log('cus', name)
     return (
       <div>
         <h2><Link to={`/customers/${_id}`}> {name} </Link></h2>

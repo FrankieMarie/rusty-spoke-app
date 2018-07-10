@@ -1,6 +1,6 @@
 import {
-  STAFF_LOADING,
-  GET_STAFF
+  GET_COMMENTS,
+  COMMENTS_LOADING
 } from '../actions/types'
 
 const initialState = {
@@ -9,15 +9,15 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case STAFF_LOADING:
+    case COMMENTS_LOADING:
       return {
         ...state,
         loading: true
       }
-    case GET_STAFF:
+    case GET_COMMENTS:
       return {
         ...state,
-        staff: action.payload,
+        comments: action.payload,
         loading: false
       }
     default:

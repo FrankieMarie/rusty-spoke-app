@@ -428,7 +428,9 @@ body {
         justify-content: space-between;
         margin-top: 1rem;
         font-size: 1.2rem;
-        max-width: 25vw;
+        max-width: 35vw;
+        border-bottom: 1px solid $light;
+        padding-bottom: 1.5rem;
 
         .customer-edit {
           background-color: $primary;

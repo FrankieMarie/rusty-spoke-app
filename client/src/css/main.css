@@ -324,7 +324,9 @@ body {
         justify-content: space-between;
         margin-top: 1rem;
         font-size: 1.2rem;
-        max-width: 25vw; }
+        max-width: 35vw;
+        border-bottom: 1px solid #ceccce;
+        padding-bottom: 1.5rem; }
         .content .all-customers .customer .links .customer-edit {
           background-color: #18d369;
           color: #222022;

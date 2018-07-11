@@ -1,21 +1,60 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { editCustomer } from '../../redux/actions/customerActions'
+import { editCustomer, getCustomerById } from '../../redux/actions/customerActions'
+import isEmpty from '../../validation/is-empty'
 
 class EditCustomer extends Component {
   state = {
     name: '',
     email: '',
     phone: '',
-    workTradeHours: ''
+    workTradeHours: '',
+    errors: {}
+  }
+
+  componentDidMount() {
+    this.props.getCustomerById(this.props.match.params.id)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors })
+    }
+
+    if (nextProps.customer.customer) {
+      const customer = nextProps.customer.customer
+      customer.name = !isEmpty(customer.name) ? customer.name : ''
+      customer.email = !isEmpty(customer.email) ? customer.email : ''
+      customer.phone = !isEmpty(customer.phone) ? customer.phone : ''
+      customer.workTradeHours = !isEmpty(customer.workTradeHours) ? customer.workTradeHours : ''
+      // set state
+      this.setState({
+        name: customer.name,
+        email: customer.email,
+        phone: customer.phone,
+        workTradeHours: customer.workTradeHours
+      })
+    }
   }
 
   onSubmit(e) {
     e.preventDefault()
+    const customerData = {
+      name: this.state.name,
+      email: this.state.email,
+      phone: this.state.phone,
+      workTradeHours: this.state.workTradeHours
+    }
+    console.log('customer data',customerData)
+    this.props.editCustomer(this.props.match.params.id, customerData, this.props.history)
   }
 
   render() {
+    if(this.props.customer.customer){
+      const {name, email, phone, workTradeHours} = this.props.customer.customer
+    }
+
     return (
       <div className="edit-form">
         <h1 className="edit-h1">Edit Customer</h1>
@@ -60,7 +99,7 @@ class EditCustomer extends Component {
             />
           </div>
 
-          <button>Update</button>
+          <button type="submit">Update</button>
         </form>
       </div>
     )
@@ -69,8 +108,13 @@ class EditCustomer extends Component {
 
 EditCustomer.propTypes = {
   editCustomer: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired,
-  customers: PropTypes.object.isRequired
+  getCustomerById: PropTypes.func.isRequired,
+  customer: PropTypes.object.isRequired
 }
 
-export default connect(null, { editCustomer })(EditCustomer)
+const mapStateToProps = state => ({
+  customer: state.customers,
+  auth: state.auth
+})
+
+export default connect(mapStateToProps, { editCustomer, getCustomerById })(EditCustomer)

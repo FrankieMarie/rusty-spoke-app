@@ -72,13 +72,15 @@ export const addCustomer = (customer, history) => dispatch => {
 }
 
 // Update customer information
-export const editCustomer = (id) => dispatch => {
-  axios.post(`http://localhost:5000/api/customers/${id}`)
-    .then(res =>
+export const editCustomer = (id, customer, history) => dispatch => {
+  axios.post(`http://localhost:5000/api/customers/${id}`, customer)
+    .then(res =>{
       dispatch({
         type: EDIT_CUSTOMER,
         payload: res.data
       })
+      history.push('/customers')
+    }
     )
     .catch(err =>
       dispatch({

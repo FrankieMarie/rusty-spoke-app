@@ -19,9 +19,11 @@ class Customers extends Component {
       allCustomers = customers.map(customer => <Customer key={customer._id} customer={customer} />)
     }
     return (
-      <div className="all-customers">
+      <div>
         <h1 className="customers-h1">Customers</h1>
-        {allCustomers}
+        <div className="all-customers">
+          {allCustomers}
+        </div>
         <footer className="customers-footer">
           <Link
             to="/customers-new"

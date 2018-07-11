@@ -5,12 +5,25 @@ class Customer extends Component {
   render() {
     const { name, _id } = this.props.customer
     return (
-      <div>
-        <h2><Link to={`/customers/${_id}`}> {name} </Link></h2>
-        <Link to="/new-visit">Create new visit</Link>
-        <Link to={`/customers/holds/${_id}`}>Create a hold</Link>
-        <button>Edit</button>
-        <button>Delete</button>
+      <div className="customer">
+
+        <h2>
+          <Link to={`/customers/${_id}`} className="customer-name">
+            <i className="fas fa-caret-right"></i> {name}
+          </Link>
+        </h2>
+
+        <div className="links">
+          <Link to="/new-visit" className="customer-links">Create new visit</Link>
+          <Link to={`/customers/holds/${_id}`} className="customer-links">Place a hold</Link>
+          <button className="customer-edit">
+            <i className="fas fa-user-edit"></i> Edit
+          </button>
+          <button className="customer-delete">
+            <i className="fas fa-user-times"></i> Delete
+          </button>
+        </div>
+
       </div>
     )
   }

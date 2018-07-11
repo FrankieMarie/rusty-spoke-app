@@ -386,4 +386,96 @@ body {
   .new-shift-form, .new-visit-form {
     margin: 2rem 20rem;
   }
+
+  /* Customers */
+  .all-customers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .customer {
+      margin: 2rem 4rem;
+
+      .customer-links {
+        color: $dark;
+        text-decoration: none;
+        border: 1px solid $primary;
+        border-radius: 100px;
+        padding: .5rem 1rem;
+        letter-spacing: .025rem;
+
+        &:hover {
+          color: $background;
+          background-color: $primary;
+        }
+      }
+
+      .customer-name {
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: $primary;
+        letter-spacing: .1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        max-width: 25vw;
+
+        .customer-edit {
+          background-color: $primary;
+          color: $dark;
+          border: 1px solid $primary;
+          border-radius: 100px;
+          padding: .5rem 1rem;
+          cursor: pointer;
+          letter-spacing: .025rem;
+          transition: all .2s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .customer-delete {
+          background-color: $dark;
+          color: $primary;
+          border: 1px solid $dark;
+          border-radius: 100px;
+          padding: .5rem 1rem;
+          cursor: pointer;
+          letter-spacing: .025rem;
+          transition: all .2s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  .customers-footer {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem 4rem;
+    border-top: 1px solid $light;
+    width: 100%;
+    font-size: 1.4rem;
+
+    .new-customer-link {
+      color: $primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
+

@@ -1,55 +1,50 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { addCustomer } from '../../redux/actions/customerActions'
+import { editCustomer } from '../../redux/actions/customerActions'
 
-class NewCustomer extends Component {
+class EditCustomer extends Component {
   state = {
     name: '',
     email: '',
     phone: '',
-    workTradeHours: 0
+    workTradeHours: ''
   }
 
-  handleSubmit = (e) => {
+  onSubmit(e) {
     e.preventDefault()
-    this.props.addCustomer(this.state, this.props.history)
   }
 
   render() {
     return (
-      <div>
-        <h1 className="customers-h1">New Customer</h1>
-        <form onSubmit={this.handleSubmit.bind(this)} className="new-customer-form">
-
-          <div className="input-group">
+      <div className="edit-form">
+        <h1 className="edit-h1">Edit Customer</h1>
+        <form onSubmit={this.onSubmit.bind(this)} className="edit-inputs">
+        <div className="input-group">
             <label htmlFor="name">Full Name</label>
             <input
-              name="name"
               type="text"
-              className="new-customer-input"
+              name="name"
               value={this.state.name}
               onChange={e => this.setState({name: e.target.value})}
             />
           </div>
 
           <div className="input-group">
-          <label htmlFor="email">Email</label>
-          <input
-            name="email"
-            type="email"
-            className="new-customer-input"
-            value={this.state.email}
-            onChange={e => this.setState({email: e.target.value})}
-          />
+            <label htmlFor="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              value={this.state.email}
+              onChange={e => this.setState({email: e.target.value})}
+            />
           </div>
 
           <div className="input-group">
             <label htmlFor="phone">Phone</label>
             <input
-              name="phone"
               type="text"
-              className="new-customer-input"
+              name="phone"
               value={this.state.phone}
               onChange={e => this.setState({phone: e.target.value})}
             />
@@ -58,24 +53,24 @@ class NewCustomer extends Component {
           <div className="input-group">
             <label htmlFor="workTradeHours">Work Trade Hours</label>
             <input
+              type="text"
               name="workTradeHours"
-              type="number"
-              className="new-customer-input"
               value={this.state.workTradeHours}
               onChange={e => this.setState({workTradeHours: e.target.value})}
             />
           </div>
 
-          <button type="submit">Submit</button>
-
+          <button>Update</button>
         </form>
       </div>
     )
   }
 }
 
-NewCustomer.propTypes = {
-  addCustomer: PropTypes.func.isRequired
+EditCustomer.propTypes = {
+  editCustomer: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  customers: PropTypes.object.isRequired
 }
 
-export default connect(null, { addCustomer })(NewCustomer)
+export default connect(null, { editCustomer })(EditCustomer)

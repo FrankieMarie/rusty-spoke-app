@@ -21,11 +21,13 @@ import Holds from './components/Holds'
 import Comments from './components/Comments'
 import Shifts from './components/Shifts'
 import Staff from './components/Staff'
-// "Add New" Forms
+// Add New Forms
 import RegisterStaff from './components/add-new-forms/RegisterStaff'
 import NewShift from './components/add-new-forms/NewShift'
 import NewVisit from './components/add-new-forms/NewVisit'
 import NewCustomer from './components/add-new-forms/NewCustomer'
+// Edit forms
+import EditCustomer from './components/edit/EditCustomer'
 
 if(localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken)
@@ -54,6 +56,7 @@ class App extends Component {
                 <PrivateRoute exact path="/customers" component={Customers} />
                 <PrivateRoute exact path="/customers/:id" component={CustomerById} />
                 <PrivateRoute exact path="/customers-new" component={NewCustomer} />
+                <PrivateRoute exact path="/edit/:id" component={EditCustomer} />
                 <PrivateRoute exact path="/current-visits" component={CurrentVisits} />
                 <PrivateRoute exact path="/new-visit" component={NewVisit} />
                 <PrivateRoute exact path="/purchases" component={Purchases} />

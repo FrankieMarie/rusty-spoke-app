@@ -27,7 +27,8 @@ html {
 .purchases-h1,
 .holds-h1,
 .comments-h1,
-.staff-h1 {
+.staff-h1,
+.edit-h1 {
   color: $dark;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
@@ -392,6 +393,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 6rem;
 
     .customer {
       margin: 2rem 4rem;
@@ -431,6 +433,7 @@ body {
         .customer-edit {
           background-color: $primary;
           color: $dark;
+          text-decoration: none;
           border: 1px solid $primary;
           border-radius: 100px;
           padding: .5rem 1rem;
@@ -440,6 +443,10 @@ body {
 
           &:hover {
             transform: scale(1.1);
+          }
+
+          &:focus {
+            outline: none;
           }
         }
 
@@ -456,17 +463,22 @@ body {
           &:hover {
             transform: scale(1.1);
           }
+
+          &:focus {
+            outline: none;
+          }
         }
       }
     }
   }
   .customers-footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding: 2rem 4rem;
     border-top: 1px solid $light;
     width: 100%;
     font-size: 1.4rem;
+    background-color: $background;
 
     .new-customer-link {
       color: $primary;
@@ -475,6 +487,43 @@ body {
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+  .customer-by-id {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid $primary;
+    padding: 5rem 0;
+    width: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(50%, 50%);
+
+    .name-by-id {
+      font-size: 2.4rem;
+      color: $secondary;
+      letter-spacing: .1rem;
+    }
+
+    .customer-info {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+
+      .small {
+        color: $secondary;
+      }
+    }
+  }
+
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .edit-inputs {
+      width: 55vw;
+      margin-top: 4rem;
     }
   }
 }

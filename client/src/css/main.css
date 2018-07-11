@@ -17,7 +17,8 @@ html {
 .purchases-h1,
 .holds-h1,
 .comments-h1,
-.staff-h1 {
+.staff-h1,
+.edit-h1 {
   color: #222022;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
@@ -297,7 +298,8 @@ body {
   .content .all-customers {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 6rem; }
     .content .all-customers .customer {
       margin: 2rem 4rem; }
       .content .all-customers .customer .customer-links {
@@ -326,6 +328,7 @@ body {
         .content .all-customers .customer .links .customer-edit {
           background-color: #18d369;
           color: #222022;
+          text-decoration: none;
           border: 1px solid #18d369;
           border-radius: 100px;
           padding: .5rem 1rem;
@@ -334,6 +337,8 @@ body {
           transition: all .2s ease-in-out; }
           .content .all-customers .customer .links .customer-edit:hover {
             transform: scale(1.1); }
+          .content .all-customers .customer .links .customer-edit:focus {
+            outline: none; }
         .content .all-customers .customer .links .customer-delete {
           background-color: #222022;
           color: #18d369;
@@ -345,15 +350,44 @@ body {
           transition: all .2s ease-in-out; }
           .content .all-customers .customer .links .customer-delete:hover {
             transform: scale(1.1); }
+          .content .all-customers .customer .links .customer-delete:focus {
+            outline: none; }
   .content .customers-footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding: 2rem 4rem;
     border-top: 1px solid #ceccce;
     width: 100%;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    background-color: #f5f5f5; }
     .content .customers-footer .new-customer-link {
       color: #18d369;
       text-decoration: none; }
       .content .customers-footer .new-customer-link:hover {
         text-decoration: underline; }
+  .content .customer-by-id {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #18d369;
+    padding: 5rem 0;
+    width: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(50%, 50%); }
+    .content .customer-by-id .name-by-id {
+      font-size: 2.4rem;
+      color: #4c4947;
+      letter-spacing: .1rem; }
+    .content .customer-by-id .customer-info {
+      margin-top: 1rem;
+      font-size: 1.4rem; }
+      .content .customer-by-id .customer-info .small {
+        color: #4c4947; }
+  .content .edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .content .edit-form .edit-inputs {
+      width: 55vw;
+      margin-top: 4rem; }

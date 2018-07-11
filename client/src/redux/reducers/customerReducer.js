@@ -1,7 +1,10 @@
 import {
   GET_CUSTOMERS,
   CUSTOMERS_LOADING,
-  GET_CUSTOMER_BY_ID
+  GET_CUSTOMER_BY_ID,
+  ADD_CUSTOMER,
+  DELETE_CUSTOMER,
+  EDIT_CUSTOMER
 } from '../actions/types'
 
 const initialState = {
@@ -26,6 +29,22 @@ export default function(state = initialState, action) {
         ...state,
         customer: action.payload,
         loading: false
+      }
+    case ADD_CUSTOMER:
+      return {
+        ...state,
+        customer: action.payload
+      }
+    case EDIT_CUSTOMER:
+      return {
+        ...state,
+        customer: action.payload
+      }
+    case DELETE_CUSTOMER:
+      console.log('state',state)
+      return {
+        ...state,
+        customers: state.customers.filter(val => val._id != action.payload)
       }
     default:
       return state

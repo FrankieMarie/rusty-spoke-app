@@ -18,13 +18,27 @@ class CustomerById extends Component {
       holds.map(hold => <Hold key={hold.id} hold={hold} />)
       return (
         current = (
-          <div>
-            <h2>{name}</h2>
-            <p>Email: {email}</p>
-            <p>Phone: {phone}</p>
-            <p>Work Trade Hours: {workTradeHours}</p>
-            <div>Holds: </div>
-            <p>Date Added: {moment(date).format('MMMM D, YYYY')}</p>
+          <div className="customer-by-id">
+            <h2 className="name-by-id">{name}</h2>
+              <p className="customer-info">
+                <small className="small">Email:</small>
+                <span>{email}</span>
+              </p>
+              <p className="customer-info">
+                <small className="small">Phone:</small>
+                <span>{phone}</span>
+              </p>
+              <p className="customer-info">
+                <small className="small">Work Trade Hours:</small>
+                <span>{workTradeHours}</span>
+              </p>
+              <div className="customer-info">
+                <small className="small">Holds:</small>
+              </div>
+              <p className="customer-info">
+                <small className="small">Date Added:</small>
+                <span>{moment(date).format('MMMM D, YYYY')}</span>
+              </p>
           </div>
         )
       )

@@ -473,16 +473,18 @@ body {
       }
     }
   }
-  .customers-footer {
+  .customers-footer,
+  .staff-footer {
     position: fixed;
     bottom: 0;
     padding: 2rem 4rem;
     border-top: 1px solid $light;
     width: 100%;
     font-size: 1.4rem;
-    background-color: $background;
+    background-color: white;
 
-    .new-customer-link {
+    .new-customer-link,
+    .new-staff-link {
       color: $primary;
       text-decoration: none;
 
@@ -526,6 +528,87 @@ body {
     .edit-inputs {
       width: 55vw;
       margin-top: 4rem;
+    }
+  }
+
+  /* Staff */
+  .all-staff {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 4rem;
+    margin-bottom: 6rem;
+    max-width: 35vw;
+
+    .individual-staff {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid $light;
+      padding-bottom: 1.5rem;
+
+      .staff-name {
+        color: $secondary;
+        font-size: 1.6rem;
+      }
+
+      .staff-btns {
+        display: flex;
+        justify-content: flex-end;
+
+        .staff-delete {
+          background-color: $dark;
+          color: $primary;
+          border: 1px solid $dark;
+          border-radius: 100px;
+          padding: .5rem 1rem;
+          cursor: pointer;
+          letter-spacing: .025rem;
+          transition: all .2s ease-in-out;
+          margin-left: 5rem;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .staff-edit {
+          background-color: $primary;
+          color: $dark;
+          text-decoration: none;
+          border: 1px solid $primary;
+          border-radius: 100px;
+          padding: .5rem 1rem;
+          cursor: pointer;
+          letter-spacing: .025rem;
+          transition: all .2s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .staff-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 2rem;
+        height: 4rem;
+        font-size: 1.4rem;
+        color: $dark;
+
+        small {
+          color: $secondary;
+          text-transform: uppercase;
+        }
+      }
     }
   }
 }

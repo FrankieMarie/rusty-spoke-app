@@ -37,3 +37,8 @@ export const setStaffLoading = () => {
     type: STAFF_LOADING
   }
 }
+
+// Delete Staff
+export const deleteStaff = () => {
+
+}

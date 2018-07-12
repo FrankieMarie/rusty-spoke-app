@@ -21,8 +21,14 @@ class Staff extends Component {
     return (
       <div>
         <h1 className="staff-h1">Staff</h1>
-        {allStaff}
-        <Link to="/new-staff" >New Staff</Link>
+        <div className="all-staff">
+          {allStaff}
+        </div>
+        <footer className="staff-footer" >
+          <Link to="/new-staff" className="new-staff-link" >
+            <i className="fas fa-user-plus"></i> New Staff
+          </Link>
+        </footer>
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import {
   GET_VISITS,
-  VISITS_LOADING
+  VISITS_LOADING,
+  NEW_VISIT
 } from '../actions/types'
 
 const initialState = {
@@ -19,6 +20,11 @@ export default function(state = initialState, action) {
         ...state,
         visits: action.payload,
         loading: false
+      }
+    case NEW_VISIT:
+      return {
+        ...state,
+        visit: action.payload
       }
     default:
       return state

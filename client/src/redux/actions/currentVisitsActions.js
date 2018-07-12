@@ -2,7 +2,8 @@ import axios from 'axios'
 import {
   GET_VISITS,
   VISITS_LOADING,
-  GET_ERRORS
+  GET_ERRORS,
+  NEW_VISIT
 } from './types'
 
 // Get all visits
@@ -28,4 +29,22 @@ export const setVisitsLoading = () => {
   return {
     type: VISITS_LOADING
   }
+}
+
+// Log new visit
+export const newVisit = (visit, history) => dispatch => {
+  axios.post('http://localhost:5000/api/visits', visit)
+    .then(res => {
+      dispatch({
+        type: NEW_VISIT,
+        payload: res.data
+      })
+      history.push('/current-visits')
+    })
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: {}
+      })
+    )
 }

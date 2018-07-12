@@ -61,8 +61,7 @@ export const addCustomer = (customer, history) => dispatch => {
         payload: res.data
       })
       history.push('/customers')
-    }
-    )
+    })
     .catch(err =>
       dispatch({
         type: GET_ERRORS,

@@ -26,6 +26,7 @@ export const SHIFTS_LOADING = 'SHIFTS_LOADING'
 
 export const GET_VISITS = 'GET_VISITS'
 export const VISITS_LOADING = 'VISITS_LOADING'
+export const NEW_VISIT = 'NEW_VISIT'
 
 export const GET_HOLDS = 'GET_HOLDS'
 export const HOLDS_LOADING = 'HOLDS_LOADING'

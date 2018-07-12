@@ -41,10 +41,9 @@ export default function(state = initialState, action) {
         customer: action.payload
       }
     case DELETE_CUSTOMER:
-      console.log('state',state)
       return {
         ...state,
-        customers: state.customers.filter(val => val._id != action.payload)
+        customers: state.customers.filter(val => val._id !== action.payload)
       }
     default:
       return state

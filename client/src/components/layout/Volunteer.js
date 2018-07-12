@@ -19,7 +19,7 @@ class Volunteer extends Component {
           <p><small>Phone:</small> {phone}</p>
         </div>
         <div className="staff-btns">
-          <a href={`/edit/${_id}`} className="staff-edit">
+          <a href={`/edit-staff/${_id}`} className="staff-edit">
             <i className="fas fa-user-edit"></i> Edit
           </a>
           <button onClick={this.onDeleteClick.bind(this)} className="staff-delete">

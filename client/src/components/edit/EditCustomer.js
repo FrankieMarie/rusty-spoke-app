@@ -46,20 +46,15 @@ class EditCustomer extends Component {
       phone: this.state.phone,
       workTradeHours: this.state.workTradeHours
     }
-    console.log('customer data',customerData)
     this.props.editCustomer(this.props.match.params.id, customerData, this.props.history)
   }
 
   render() {
-    if(this.props.customer.customer){
-      const {name, email, phone, workTradeHours} = this.props.customer.customer
-    }
-
     return (
       <div className="edit-form">
         <h1 className="edit-h1">Edit Customer</h1>
         <form onSubmit={this.onSubmit.bind(this)} className="edit-inputs">
-        <div className="input-group">
+          <div className="input-group">
             <label htmlFor="name">Full Name</label>
             <input
               type="text"

@@ -62,16 +62,11 @@ router.post('/:id', passport.authenticate('jwt', { session: false }), (req, res)
   if(req.body.name) staffFields.name = req.body.name
   if(req.body.email) staffFields.email = req.body.email
   if(req.body.phone) staffFields.phone = req.body.phone
-  Staff.findOne({ _id: req.params.id })
-    .then(staff => {
-      if(staff) {
-        Staff.findOneAndUpdate(
-          { _id: req.params.id },
-          { $set: staffFields },
-          { new: true }
-        ).then(staff => res.json(staff))
-      }
-    })
+  Staff.findOneAndUpdate(
+    { _id: req.params.id },
+    { $set: staffFields },
+    { new: true }
+  ).then(staff => res.json(staff))
 })
 
 // @route     DELETE api/staff/:id

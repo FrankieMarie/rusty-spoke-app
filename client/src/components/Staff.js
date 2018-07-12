@@ -16,7 +16,8 @@ class Staff extends Component {
     if (!staff) {
       allStaff = <div></div>
     } else {
-      allStaff = staff.map(staff => <Volunteer key={staff._id} staff={staff} />)
+      console.log(staff);
+      allStaff = staff.map(volunteer => <Volunteer key={volunteer._id} staff={volunteer} />)
     }
     return (
       <div>

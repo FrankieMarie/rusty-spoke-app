@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getAllVisits } from '../redux/actions/currentVisitsActions'
@@ -20,6 +21,14 @@ class CurrentVisits extends Component {
       <div>
         <h1 className="visits-h1">Current Visits</h1>
         {allVisits}
+        <footer className="customers-footer">
+          <Link
+            to="/new-visit"
+            className="new-customer-link"
+          >
+            <i className="fas fa-plus"></i> New Visit
+          </Link>
+        </footer>
       </div>
     )
   }

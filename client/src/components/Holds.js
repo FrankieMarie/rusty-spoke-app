@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getAllHolds } from '../redux/actions/holdsActions'
@@ -21,6 +22,14 @@ class Holds extends Component {
       <div>
         <h1 className="holds-h1">Holds</h1>
         {allHolds}
+        <footer className="customers-footer">
+          <Link
+            to="/new-hold"
+            className="new-customer-link"
+          >
+            <i className="fas fa-user-lock"></i> New Hold
+          </Link>
+        </footer>
       </div>
     )
   }

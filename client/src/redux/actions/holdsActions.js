@@ -8,7 +8,7 @@ import {
 // Get all holds
 export const getAllHolds = () => dispatch => {
   dispatch(setHoldsLoading())
-  axios.get('http://localhost:5000/api/customers/all')
+  axios.get('http://localhost:5000/api/holds/all')
     .then(res =>
       dispatch({
         type: GET_HOLDS,

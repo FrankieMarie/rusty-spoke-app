@@ -16,7 +16,6 @@ class Customers extends Component {
     if (!customers) {
       allCustomers = <div></div>
     } else {
-      console.log(customers);
       allCustomers = customers.map(customer => <Customer key={customer._id} customer={customer} />)
     }
     return (

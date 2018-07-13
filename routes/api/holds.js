@@ -4,12 +4,14 @@ const passport = require('passport')
 
 // Model
 const Hold = require('../../models/Hold')
+const Customer = require('../../models/Customer')
 
 // @route     GET api/holds/all
 // @desc      Get all holds
 // @access    Private
 router.get('/all', passport.authenticate('jwt', { session: false }), (req, res) => {
   Hold.find()
+  .populate('customer', ['name'], Customer)
   .then(hold => res.json(hold))
   .catch(err => res.status(404).json(err))
 })

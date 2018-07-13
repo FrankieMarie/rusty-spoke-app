@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getAllPurchases } from '../redux/actions/purchaseActions'
@@ -20,6 +21,14 @@ class Purchases extends Component {
       <div>
         <h1 className="purchases-h1">Purchases</h1>
         {allPurchases}
+        <footer className="customers-footer">
+          <Link
+            to="/new-purchase"
+            className="new-customer-link"
+          >
+            <i className="fas fa-dollar-sign"></i> New Purchase
+          </Link>
+        </footer>
       </div>
     )
   }

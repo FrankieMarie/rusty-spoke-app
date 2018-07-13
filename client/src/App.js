@@ -26,6 +26,8 @@ import RegisterStaff from './components/add-new-forms/RegisterStaff'
 import NewShift from './components/add-new-forms/NewShift'
 import NewVisit from './components/add-new-forms/NewVisit'
 import NewCustomer from './components/add-new-forms/NewCustomer'
+import NewPurchase from './components/add-new-forms/NewPurchase'
+import NewHold from './components/add-new-forms/NewHold'
 // Edit forms
 import EditCustomer from './components/edit/EditCustomer'
 import EditStaff from './components/edit/EditStaff'
@@ -61,7 +63,9 @@ class App extends Component {
                 <PrivateRoute exact path="/current-visits" component={CurrentVisits} />
                 <PrivateRoute exact path="/new-visit" component={NewVisit} />
                 <PrivateRoute exact path="/purchases" component={Purchases} />
+                <PrivateRoute exact path="/new-purchase" component={NewPurchase} />
                 <PrivateRoute exact path="/holds" component={Holds} />
+                <PrivateRoute exact path="/new-hold" component={NewHold} />
                 <PrivateRoute exact path="/comments" component={Comments} />
                 <PrivateRoute exact path="/shifts" component={Shifts} />
                 <PrivateRoute exact path="/new-shift" component={NewShift} />

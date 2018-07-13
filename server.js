@@ -11,6 +11,7 @@ const customers = require('./routes/api/customers')
 const purchases = require('./routes/api/purchases')
 const comments = require('./routes/api/comments')
 const visits = require('./routes/api/currentVisits')
+const holds = require('./routes/api/holds')
 
 const app = express()
 
@@ -43,6 +44,7 @@ app.use('/api/customers', customers)
 app.use('/api/purchases', purchases)
 app.use('/api/comments', comments)
 app.use('/api/visits', visits)
+app.use('/api/holds', holds)
 
 const port = process.env.PORT || 5000
 

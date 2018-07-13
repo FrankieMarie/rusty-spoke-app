@@ -4,8 +4,6 @@ import { getCustomerById } from '../redux/actions/customerActions'
 import { connect } from 'react-redux'
 import moment from 'moment'
 
-import Hold from './layout/Hold'
-
 class CustomerById extends Component {
   componentDidMount() {
     this.props.getCustomerById(this.props.match.params.id)
@@ -14,8 +12,7 @@ class CustomerById extends Component {
   render() {
     let current;
     if(this.props.customer.customer){
-      const {name, email, phone, workTradeHours, holds, date} = this.props.customer.customer
-      holds.map(hold => <Hold key={hold.id} hold={hold} />)
+      const {name, email, phone, workTradeHours, date} = this.props.customer.customer
       return (
         current = (
           <div className="customer-by-id">
@@ -32,9 +29,6 @@ class CustomerById extends Component {
                 <small className="small">Work Trade Hours:</small>
                 <span>{workTradeHours}</span>
               </p>
-              <div className="customer-info">
-                <small className="small">Holds:</small>
-              </div>
               <p className="customer-info">
                 <small className="small">Date Added:</small>
                 <span>{moment(date).format('MMMM D, YYYY')}</span>

@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getAllCustomers } from '../../redux/actions/customerActions'
 
-class NewHold extends Component {
+class NewPurchase extends Component {
   state = {
     customer: '',
     item: '',
     description: '',
-    completed: ''
+    costHours: '',
+    costCash: ''
   }
 
   componentDidMount() {
@@ -26,8 +27,7 @@ class NewHold extends Component {
     }
     return (
       <div>
-        <h1 className="purchases-h1">New Hold</h1>
-
+        <h1 className="purchases-h1">New Purchase</h1>
         <form onSubmit={this.handleSubmit.bind(this)} className="new-purchase-form">
 
           <div className="input-group">
@@ -63,13 +63,22 @@ class NewHold extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="completed">Completed?</label>
+            <label htmlFor="costHours">Cost Hours</label>
             <input
-              name="completed"
-              type="boolean"
-              className="new-customer-input"
-              value={this.state.completed}
-              onChange={e => this.setState({completed: e.target.value})}
+              name="costHours"
+              type="number"
+              value={this.state.costHours}
+              onChange={e => this.setState({costHours: e.target.value})}
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="costCash">Cost Cash</label>
+            <input
+              name="costCash"
+              type="number"
+              value={this.state.costCash}
+              onChange={e => this.setState({costCash: e.target.value})}
             />
           </div>
 
@@ -86,4 +95,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 })
 
-export default connect(mapStateToProps, { getAllCustomers })(NewHold)
+export default connect(mapStateToProps, { getAllCustomers })(NewPurchase)

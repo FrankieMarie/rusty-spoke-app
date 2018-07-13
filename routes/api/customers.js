@@ -43,22 +43,6 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
     })
 })
 
-// @route     POST api/customers/holds/:id
-// @desc      Create a hold for a customer
-// @access    Private
-router.post('/holds/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Customer.findById({ _id: req.params.id })
-    .then(customer => {
-      const newHold = {
-        item: req.body.item,
-        description: req.body.description
-      }
-      customer.holds.unshift(newHold)
-      customer.save()
-        .then(customer => res.json(customer))
-    })
-})
-
 // @route     POST api/customers/:id
 // @desc      Edit customer's information
 // @access    Private

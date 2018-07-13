@@ -1,49 +1,49 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 class Navbar extends Component {
  render() {
     return (
       <nav className="sidebar">
 
-      <div className="nav">
+      <ul className="nav">
 
-        <div className="link">
+        <li className="link active">
           <i className="fas fa-users nav-icon"></i>
-          <Link className="nav-link" to="/customers">Customers</Link>
-        </div>
+          <NavLink className="nav-link" to="/customers" activeClassName="active">Customers</NavLink>
+        </li>
 
-        <div className="link">
+        <li className="link">
           <i className="fas fa-user-check nav-icon"></i>
-          <Link className="nav-link" to="/current-visits">Current Visits</Link>
-        </div>
+          <NavLink className="nav-link" to="/current-visits" >Current Visits</NavLink>
+        </li>
 
-        <div className="link">
+        <li className="link">
           <i className="fas fa-dollar-sign nav-icon"></i>
-          <Link className="nav-link" to="/purchases">Purchases</Link>
-        </div>
+          <NavLink className="nav-link" to="/purchases">Purchases</NavLink>
+        </li>
 
-        <div className="link">
+        <li className="link">
           <i className="fas fa-lock nav-icon"></i>
-          <Link className="nav-link" to="/holds">Holds</Link>
-        </div>
+          <NavLink className="nav-link" to="/holds">Holds</NavLink>
+        </li>
 
-        <div className="link">
+        <li className="link">
           <i className="fas fa-comments nav-icon"></i>
-          <Link className="nav-link" to="/comments">Comments</Link>
-        </div>
+          <NavLink className="nav-link" to="/comments">Comments</NavLink>
+        </li>
 
-        <div className="link">
+        <li className="link">
           <i className="fas fa-user-clock nav-icon"></i>
-          <Link className="nav-link" to="/shifts">Shifts</Link>
-        </div>
+          <NavLink className="nav-link" to="/shifts">Shifts</NavLink>
+        </li>
 
-        <div className="link">
+        <li className="link">
           <i className="fas fa-star nav-icon"></i>
-          <Link className="nav-link" to="/staff">Staff</Link>
-        </div>
+          <NavLink className="nav-link" to="/staff">Staff</NavLink>
+        </li>
 
-      </div>
+      </ul>
 
         <p className="legal-text">&copy; 2018 The Rusty Spoke - Shop App</p>
       </nav>

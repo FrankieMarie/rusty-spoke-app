@@ -21,7 +21,6 @@ class Customer extends Component {
 
         <div className="links">
           <Link to="/new-visit" className="customer-links">Create new visit</Link>
-          <Link to={`/customers/holds/${_id}`} className="customer-links">Place a hold</Link>
           <a href={`/edit/${_id}`} className="customer-edit">
             <i className="fas fa-user-edit"></i> Edit
           </a>

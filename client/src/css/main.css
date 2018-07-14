@@ -510,6 +510,46 @@ body {
           font-weight: 700; }
           .content .hold .hold-item .hold-info .hold-name:hover {
             text-decoration: underline; }
+    .content .hold .hold-btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: .5rem; }
+    .content .hold .hold-edit {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #18d369;
+      color: #222022;
+      text-decoration: none;
+      border: 1px solid #18d369;
+      border-radius: 100px;
+      padding: .5rem 1rem;
+      cursor: pointer;
+      letter-spacing: .025rem;
+      transition: all .2s ease-in-out; }
+      .content .hold .hold-edit .hold-edit-icon {
+        padding-right: .5rem; }
+      .content .hold .hold-edit:hover {
+        transform: scale(1.1); }
+      .content .hold .hold-edit:focus {
+        outline: none; }
+    .content .hold .hold-delete {
+      display: flex;
+      background-color: transparent;
+      color: #ff2d26;
+      border-style: none;
+      border: 1px solid #ff2d26;
+      border-radius: 100%;
+      text-align: center;
+      padding: .5rem .7rem;
+      cursor: pointer;
+      letter-spacing: .025rem;
+      transition: all .2s ease-in-out;
+      margin-left: 5rem; }
+      .content .hold .hold-delete:hover {
+        background-color: #ff2d26;
+        color: #f5f5f5; }
+      .content .hold .hold-delete:focus {
+        outline: none; }
   .content .all-comments .comments-footer {
     max-height: 20vh; }
     .content .all-comments .comments-footer .add-comment-form {

@@ -4,7 +4,7 @@ import moment from 'moment'
 
 class Hold extends Component {
   render() {
-    const { customer, item, description, date, completed } = this.props.hold
+    const { customer, item, description, date, completed, _id } = this.props.hold
     return (
       <ul className="hold">
 
@@ -42,6 +42,17 @@ class Hold extends Component {
             <span className="hold-content">{completed.toString()}</span>
           </p>
         </li>
+
+        <div className="hold-btns">
+          <a href={`/edit-hold/${_id}`} className="hold-edit">
+            <i className="fas fa-edit hold-edit-icon"></i> Edit
+          </a>
+
+          <button className="hold-delete">
+            <i className="fas fa-times delete-hold-icon"></i>
+          </button>
+        </div>
+
 
       </ul>
     )

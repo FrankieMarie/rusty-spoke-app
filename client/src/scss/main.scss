@@ -686,6 +686,60 @@ body {
         }
       }
     }
+
+    .hold-btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: .5rem;
+    }
+
+    .hold-edit {
+      display: flex;
+      justify-content: flex-end;
+      background-color: $primary;
+      color: $dark;
+      text-decoration: none;
+      border: 1px solid $primary;
+      border-radius: 100px;
+      padding: .5rem 1rem;
+      cursor: pointer;
+      letter-spacing: .025rem;
+      transition: all .2s ease-in-out;
+
+      .hold-edit-icon { padding-right: .5rem;}
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .hold-delete {
+      display: flex;
+      background-color: transparent;
+      color: $error;
+      border-style: none;
+      border: 1px solid $error;
+      border-radius: 100%;
+      text-align: center;
+      padding: .5rem .7rem;
+      cursor: pointer;
+      letter-spacing: .025rem;
+      transition: all .2s ease-in-out;
+      margin-left: 5rem;
+
+      &:hover {
+        background-color: $error;
+        color: $background;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 
   /* Comments */

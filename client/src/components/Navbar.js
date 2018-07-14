@@ -8,9 +8,9 @@ class Navbar extends Component {
 
       <ul className="nav">
 
-        <li className="link active">
+        <li className="link">
           <i className="fas fa-users nav-icon"></i>
-          <NavLink className="nav-link" to="/customers" activeClassName="active">Customers</NavLink>
+          <NavLink className="nav-link" to="/customers">Customers</NavLink>
         </li>
 
         <li className="link">

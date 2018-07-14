@@ -16,6 +16,16 @@ router.get('/all', passport.authenticate('jwt', { session: false }), (req, res) 
   .catch(err => res.status(404).json(err))
 })
 
+// @route     GET api/holds/:id
+// @desc      Get hold by id
+// @access    Private
+router.get('/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
+  Hold.findById({ _id: req.params.id })
+  .populate('customer', ['name', '_id'], Customer)
+  .then(hold => res.json(hold))
+  .catch(err => res.status(404).json({ notfound: 'Hold not found' }))
+})
+
 // @route     POST api/holds
 // @desc      Log a hold
 // @access    Private

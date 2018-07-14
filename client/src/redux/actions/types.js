@@ -30,3 +30,6 @@ export const NEW_VISIT = 'NEW_VISIT'
 
 export const GET_HOLDS = 'GET_HOLDS'
 export const HOLDS_LOADING = 'HOLDS_LOADING'
+export const DELETE_HOLD = 'DELETE_HOLD'
+export const EDIT_HOLD = 'EDIT_HOLD'
+export const GET_HOLD_BY_ID = 'GET_HOLD_BY_ID'

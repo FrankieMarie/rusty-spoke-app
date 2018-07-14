@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { deleteHold } from '../../redux/actions/holdsActions'
 import moment from 'moment'
 
 class Hold extends Component {
+
+  onDeleteClick(e) {
+    this.props.deleteHold(this.props.hold._id)
+  }
+
   render() {
     const { customer, item, description, date, completed, _id } = this.props.hold
     return (
@@ -44,19 +51,18 @@ class Hold extends Component {
         </li>
 
         <div className="hold-btns">
-          <a href={`/edit-hold/${_id}`} className="hold-edit">
+          <Link to={`/edit-hold/${_id}`} className="hold-edit">
             <i className="fas fa-edit hold-edit-icon"></i> Edit
-          </a>
+          </Link>
 
-          <button className="hold-delete">
+          <button className="hold-delete" onClick={this.onDeleteClick.bind(this)}>
             <i className="fas fa-times delete-hold-icon"></i>
           </button>
         </div>
-
 
       </ul>
     )
   }
 }
 
-export default Hold
+export default connect(null, { deleteHold })(Hold)

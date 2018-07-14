@@ -658,7 +658,7 @@ body {
 
       .hold-info {
         border-bottom: 1px dotted $light;
-        width: 25%;
+        width: 50%;
         display: flex;
         align-content: space-between;
 
@@ -740,6 +740,17 @@ body {
         outline: none;
       }
     }
+  }
+
+  .edit-hold-btn {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $background;
+  }
+
+  .form-input {
+    color: $dark;
+    padding-top: .5rem;
   }
 
   /* Comments */

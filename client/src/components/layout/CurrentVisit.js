@@ -5,13 +5,13 @@ class CurrentVisit extends Component {
   render() {
     const { customer, arrived, departed, reason, worktrade, toolbox } = this.props.visit
     return (
-      <div>
-        <p>{customer.name}</p>
-        <p>Arrived: {moment(arrived).format('MMMM D, YYYY, H:mm a')}</p>
-        {departed ? <p>Departed: {moment(departed).format('MMMM D, YYYY, H:mm a')}</p> : null}
-        <p>Reason: {reason}</p>
-        <p>Toolbox: {toolbox}</p>
-        <p>Worktrade: {worktrade}</p>
+      <div className="visit">
+        <p className="visit-name"><i className="far fa-check-circle"></i> {customer.name}</p>
+        <p><small className="small">Arrived:</small> {moment(arrived).format('MMMM D, YYYY, H:mm a')}</p>
+        {departed ? <small className="small"><p>Departed: {moment(departed).format('MMMM D, YYYY, H:mm a')}</p></small> : null}
+        <p><small className="small">Reason:</small> {reason}</p>
+        <p><small className="small">Toolbox:</small> {toolbox}</p>
+        <p><small className="small">Worktrade:</small> {worktrade}</p>
       </div>
     )
   }

@@ -236,7 +236,10 @@ body {
   justify-content: space-between;
   /* New shift */
   /* Customers */
-  /* Staff */ }
+  /* Staff */
+  /* Current Visits */
+  /* Holds */
+  /* Comments */ }
   .content .date-time {
     border: 2px solid #ceccce;
     border-radius: 10px;
@@ -457,3 +460,57 @@ body {
         .content .all-staff .individual-staff .staff-info small {
           color: #4c4947;
           text-transform: uppercase; }
+  .content .all-visits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .content .all-visits .visit {
+      position: relative;
+      margin: 1rem 4rem;
+      border-bottom: 1px solid #18d369;
+      padding-bottom: 1rem;
+      font-size: 1.2rem; }
+      .content .all-visits .visit .visit-name {
+        font-size: 1.6rem;
+        padding-bottom: .5rem;
+        color: #222022; }
+      .content .all-visits .visit .small {
+        margin-right: 1rem; }
+  .content .all-holds {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 4rem 0 4rem; }
+  .content .hold {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #18d369;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    position: relative; }
+    .content .hold .hold-item {
+      list-style: none;
+      padding: .5rem 0; }
+      .content .hold .hold-item .hold-info {
+        border-bottom: 1px dotted #ceccce;
+        width: 25%;
+        display: flex;
+        align-content: space-between; }
+        .content .hold .hold-item .hold-info .small {
+          color: #4c4947;
+          text-transform: uppercase;
+          width: 50%;
+          font-size: 1.1rem; }
+        .content .hold .hold-item .hold-info .hold-content {
+          color: #222022;
+          font-size: 1.4rem;
+          letter-spacing: .05rem; }
+        .content .hold .hold-item .hold-info .hold-name {
+          text-decoration: none;
+          color: #18d369;
+          font-weight: 700; }
+          .content .hold .hold-item .hold-info .hold-name:hover {
+            text-decoration: underline; }
+  .content .all-comments .comments-footer {
+    max-height: 20vh; }
+    .content .all-comments .comments-footer .add-comment-form {
+      position: absolute; }

@@ -15,9 +15,8 @@ const CurrentVisitSchema = new Schema({
     required: true
   },
   worktrade: {
-    type: Boolean,
-    required: true,
-    default: false
+    type: String,
+    required: true
   },
   arrived: {
     type: Date,

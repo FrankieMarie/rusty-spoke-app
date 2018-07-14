@@ -611,5 +611,100 @@ body {
       }
     }
   }
-}
 
+  /* Current Visits */
+  .all-visits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .visit {
+      position: relative;
+      margin: 1rem 4rem;
+      border-bottom: 1px solid $primary;
+      padding-bottom: 1rem;
+      font-size: 1.2rem;
+
+      .visit-name {
+        font-size: 1.6rem;
+        padding-bottom: .5rem;
+        color: $dark;
+      }
+
+      .small {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  /* Holds */
+  .all-holds {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 4rem 0 4rem;
+  }
+
+  .hold {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $primary;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    position: relative;
+
+    .hold-item {
+      list-style: none;
+      padding: .5rem 0;
+
+      .hold-info {
+        border-bottom: 1px dotted $light;
+        width: 25%;
+        display: flex;
+        align-content: space-between;
+
+        .small {
+          color: $secondary;
+          text-transform: uppercase;
+          width: 50%;
+          font-size: 1.1rem;
+        }
+
+        .hold-content {
+          color: $dark;
+          font-size: 1.4rem;
+          letter-spacing: .05rem;
+        }
+
+        .hold-name {
+          text-decoration: none;
+          color: $primary;
+          font-weight: 700;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  /* Comments */
+  .all-comments {
+
+    .comment-container {
+
+    }
+
+    .comments-footer {
+      max-height: 20vh;
+
+      .add-comment-form {
+        position: absolute;
+
+        .new-comment-input {
+
+        }
+      }
+    }
+  }
+}

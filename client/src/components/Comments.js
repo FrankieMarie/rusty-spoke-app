@@ -20,8 +20,10 @@ class Comments extends Component {
     return (
       <div>
         <h1 className="comments-h1">Comments</h1>
-        {allComments}
-        <footer className="comments-footer">
+        <div className="all-comments">
+          {allComments}
+        </div>
+        <footer className="comments-footer customers-footer">
           <PostComment />
         </footer>
       </div>

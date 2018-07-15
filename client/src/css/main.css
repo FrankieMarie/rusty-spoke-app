@@ -238,6 +238,7 @@ body {
   /* Customers */
   /* Staff */
   /* Holds + Current Visits */
+  /* Customer by id */
   /* Comments */ }
   .content .date-time {
     border: 2px solid #ceccce;
@@ -377,25 +378,6 @@ body {
       .content .staff-footer .new-customer-link:hover,
       .content .staff-footer .new-staff-link:hover {
         text-decoration: underline; }
-  .content .customer-by-id {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid #18d369;
-    padding: 5rem 0;
-    width: 50%;
-    text-align: center;
-    left: 50%;
-    transform: translate(50%, 50%); }
-    .content .customer-by-id .name-by-id {
-      font-size: 2.4rem;
-      color: #4c4947;
-      letter-spacing: .1rem; }
-    .content .customer-by-id .customer-info {
-      margin-top: 1rem;
-      font-size: 1.4rem; }
-      .content .customer-by-id .customer-info .small {
-        color: #4c4947; }
   .content .all-staff {
     display: flex;
     flex-direction: column;
@@ -559,6 +541,62 @@ body {
     margin-left: 4rem; }
     .content .styled-select:focus {
       outline: none; }
+  .content .customer-by-id {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #18d369;
+    padding: 2rem 0 2rem 0;
+    width: 50%;
+    left: 50%;
+    transform: translate(50%, 50%); }
+    .content .customer-by-id .name-by-id {
+      font-size: 2.4rem;
+      color: #4c4947;
+      letter-spacing: .1rem;
+      text-align: center;
+      margin-bottom: 1rem; }
+    .content .customer-by-id .customer-item {
+      list-style: none;
+      padding: .5rem 0; }
+      .content .customer-by-id .customer-item .customer-info {
+        border-bottom: 1px dotted #ceccce;
+        width: 50%;
+        display: flex;
+        align-content: space-between;
+        left: 50%;
+        transform: translate(50%, 50%); }
+        .content .customer-by-id .customer-item .customer-info .small {
+          color: #4c4947;
+          text-transform: uppercase;
+          width: 50%;
+          font-size: 1.1rem; }
+        .content .customer-by-id .customer-item .customer-info .customer-content {
+          color: #222022;
+          font-size: 1.4rem;
+          letter-spacing: .05rem; }
+    .content .customer-by-id .customer-edit {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: auto;
+      margin-top: 2rem;
+      margin-right: 2rem;
+      padding: 2rem 2rem 0 0;
+      background-color: #18d369;
+      color: #222022;
+      text-decoration: none;
+      border: 1px solid #18d369;
+      border-radius: 100px;
+      padding: .5rem 1rem;
+      cursor: pointer;
+      letter-spacing: .025rem;
+      transition: all .2s ease-in-out; }
+      .content .customer-by-id .customer-edit .customer-edit-icon {
+        padding-right: .2rem; }
+      .content .customer-by-id .customer-edit:hover {
+        transform: scale(1.1); }
+      .content .customer-by-id .customer-edit:focus {
+        outline: none; }
   .content .all-comments .comments-footer {
     max-height: 20vh; }
     .content .all-comments .comments-footer .add-comment-form {

@@ -493,32 +493,6 @@ body {
       }
     }
   }
-  .customer-by-id {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid $primary;
-    padding: 5rem 0;
-    width: 50%;
-    text-align: center;
-    left: 50%;
-    transform: translate(50%, 50%);
-
-    .name-by-id {
-      font-size: 2.4rem;
-      color: $secondary;
-      letter-spacing: .1rem;
-    }
-
-    .customer-info {
-      margin-top: 1rem;
-      font-size: 1.4rem;
-
-      .small {
-        color: $secondary;
-      }
-    }
-  }
 
   /* Staff */
   .all-staff {
@@ -753,6 +727,83 @@ body {
 
     &:focus {
       outline: none;
+    }
+  }
+
+  /* Customer by id */
+  .customer-by-id {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid $primary;
+    padding: 2rem 0 2rem 0;
+    width: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+
+    .name-by-id {
+      font-size: 2.4rem;
+      color: $secondary;
+      letter-spacing: .1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .customer-item {
+      list-style: none;
+      padding: .5rem 0;
+
+      .customer-info {
+        border-bottom: 1px dotted $light;
+        width: 50%;
+        display: flex;
+        align-content: space-between;
+        left: 50%;
+        transform: translate(50%, 50%);
+
+        .small {
+          color: $secondary;
+          text-transform: uppercase;
+          width: 50%;
+          font-size: 1.1rem;
+        }
+
+        .customer-content {
+          color: $dark;
+          font-size: 1.4rem;
+          letter-spacing: .05rem;
+        }
+      }
+    }
+
+    .customer-edit {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: auto;
+      margin-top: 2rem;
+      margin-right: 2rem;
+      padding: 2rem 2rem 0 0;
+      background-color: $primary;
+      color: $dark;
+      text-decoration: none;
+      border: 1px solid $primary;
+      border-radius: 100px;
+      padding: .5rem 1rem;
+      cursor: pointer;
+      letter-spacing: .025rem;
+      transition: all .2s ease-in-out;
+
+      .customer-edit-icon {
+        padding-right: .2rem;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 

@@ -21,6 +21,12 @@ class Comments extends Component {
       <div>
         <h1 className="comments-h1">Comments</h1>
         <div className="all-comments">
+        <div className="h2s">
+          <h2>Author</h2>
+          <h2>Date</h2>
+          <h2>Resource</h2>
+          <h2>Body</h2>
+        </div>
           {allComments}
         </div>
         <footer className="comments-footer customers-footer">

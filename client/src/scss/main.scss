@@ -809,11 +809,27 @@ body {
 
   /* Comments */
   .all-comments {
+    margin: 2rem 4rem;
+
+    .h2s {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 4rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $light;
+      color: $secondary;
+    }
 
     .comment-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 4rem;
+      margin-bottom: 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 1px dotted $primary;
+      font-size: 1.2rem;
+      color: $dark;
     }
   }
 

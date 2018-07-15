@@ -3,7 +3,6 @@ import { getAllStaff } from '../../redux/actions/staffActions'
 import { getAllCustomers } from '../../redux/actions/customerActions'
 import { postComment } from '../../redux/actions/commentActions'
 import { connect } from 'react-redux'
-import moment from 'moment'
 import { withRouter } from 'react-router'
 
 class PostComment extends Component {
@@ -15,7 +14,6 @@ class PostComment extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
     this.props.getAllStaff()
     this.props.getAllCustomers()
   }
@@ -58,6 +56,7 @@ class PostComment extends Component {
                 value={this.state.author}
                 onChange={e => this.setState({author: e.target.value})}
               >
+                <option className="option">Select: </option>
                 {staffNames}
               </select>
             </div>
@@ -75,7 +74,7 @@ class PostComment extends Component {
                 value={this.state.resource}
                 onChange={e => this.setState({resource: e.target.value})}
               >
-                <option className="option">{moment(Date.now()).format('MMMM D, YYYY, H:mm a')}</option>
+                <option className="option">Select: </option>
                 {customerNames}
               </select>
             </div>

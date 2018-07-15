@@ -6,12 +6,8 @@ const CommentSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  resourceType: {
-    type: String,
-    required: true
-  },
   resource: {
-    type: Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId || Date.now(),
     ref: 'customer'
   },
   author: {

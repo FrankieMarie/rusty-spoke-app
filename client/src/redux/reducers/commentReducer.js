@@ -1,6 +1,7 @@
 import {
   GET_COMMENTS,
-  COMMENTS_LOADING
+  COMMENTS_LOADING,
+  POST_COMMENT
 } from '../actions/types'
 
 const initialState = {
@@ -19,6 +20,11 @@ export default function(state = initialState, action) {
         ...state,
         comments: action.payload,
         loading: false
+      }
+    case POST_COMMENT:
+      return {
+        ...state,
+        comment: action.payload
       }
     default:
       return state

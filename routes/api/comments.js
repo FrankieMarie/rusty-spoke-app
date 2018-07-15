@@ -33,7 +33,6 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
     return res.status(400).json(errors)
   }
   const comment = new Comment({
-    resourceType: req.body.resourceType,
     resource: req.body.resource,
     author: req.body.author,
     body: req.body.body

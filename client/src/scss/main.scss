@@ -520,17 +520,6 @@ body {
     }
   }
 
-  .edit-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .edit-inputs {
-      width: 55vw;
-      margin-top: 4rem;
-    }
-  }
-
   /* Staff */
   .all-staff {
     display: flex;
@@ -612,39 +601,26 @@ body {
     }
   }
 
-  /* Current Visits */
-  .all-visits {
+  /* Holds + Current Visits */
+  .all-holds, .all-visits {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin: 3rem 4rem 0 4rem;
 
-    .visit {
-      position: relative;
-      margin: 1rem 4rem;
-      border-bottom: 1px solid $primary;
-      padding-bottom: 1rem;
-      font-size: 1.2rem;
+    .visit-name {
+      font-size: 1.6rem;
+      padding-bottom: .5rem;
+      text-decoration: none;
+      color: $primary;
+      font-weight: 700;
 
-      .visit-name {
-        font-size: 1.6rem;
-        padding-bottom: .5rem;
-        color: $dark;
-      }
-
-      .small {
-        margin-right: 1rem;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
 
-  /* Holds */
-  .all-holds {
-    display: flex;
-    flex-direction: column;
-    margin: 3rem 4rem 0 4rem;
-  }
-
-  .hold {
+  .hold, .visit {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $primary;
@@ -652,11 +628,11 @@ body {
     padding-bottom: 1rem;
     position: relative;
 
-    .hold-item {
+    .hold-item, .visit-item {
       list-style: none;
       padding: .5rem 0;
 
-      .hold-info {
+      .hold-info, .visit-info {
         border-bottom: 1px dotted $light;
         width: 50%;
         display: flex;
@@ -669,7 +645,7 @@ body {
           font-size: 1.1rem;
         }
 
-        .hold-content {
+        .hold-content, .visit-content {
           color: $dark;
           font-size: 1.4rem;
           letter-spacing: .05rem;
@@ -751,6 +727,33 @@ body {
   .form-input {
     color: $dark;
     padding-top: .5rem;
+  }
+
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .edit-inputs {
+      width: 55vw;
+      margin-top: 4rem;
+    }
+  }
+
+  .custom-select {
+    position: relative;
+  }
+  .styled-select {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: $background;
+    border: 1px solid $light;
+    width: 25%;
+    margin-left: 4rem;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   /* Comments */

@@ -25,26 +25,36 @@ class NewHold extends Component {
       customerNames = customers.map(customer => <option key={customer._id} value={customer._id}>{customer.name}</option>)
     }
     return (
-      <div>
+      <div className="edit-form">
         <h1 className="purchases-h1">New Hold</h1>
 
-        <form onSubmit={this.handleSubmit.bind(this)} className="new-purchase-form">
+        <form onSubmit={this.handleSubmit.bind(this)} className="edit-inputs">
 
-          <div className="input-group">
-            <label htmlFor="customer">Customer</label>
+          <div className="input-group custom-select">
+            <label
+              htmlFor="customer"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Customer
+            </label>
             <select
+              className="styled-select"
               name="customer"
               value={this.state.customer}
               onChange={e => this.setState({customer: e.target.value})}
             >
-              <option>Select Customer:</option>
+              <option className="option">Select Customer</option>
               {customerNames}
             </select>
           </div>
 
           <div className="input-group">
-            <label htmlFor="item">Item</label>
+            <label
+              htmlFor="item"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Item
+            </label>
             <input
+              className="form-input"
               name="item"
               type="text"
               value={this.state.item}
@@ -53,8 +63,13 @@ class NewHold extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="description">Description</label>
+            <label
+              htmlFor="description"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Description
+            </label>
             <input
+              className="form-input"
               name="description"
               type="text"
               value={this.state.description}
@@ -63,11 +78,15 @@ class NewHold extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="completed">Completed?</label>
+            <label
+              htmlFor="completed"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Completed?
+            </label>
             <input
+              className="form-input"
               name="completed"
               type="boolean"
-              className="new-customer-input"
               value={this.state.completed}
               onChange={e => this.setState({completed: e.target.value})}
             />

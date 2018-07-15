@@ -30,15 +30,20 @@ class NewVisit extends Component {
       customerNames = customers.map(customer => <option key={customer._id} value={customer._id}>{customer.name}</option>)
     }
     return (
-      <div className="">
+      <div className="edit-form">
 
         <h1 className="new-visit-h1">New Visit</h1>
 
-        <form onSubmit={this.handleSubmit.bind(this)} className="new-visit-form">
+        <form onSubmit={this.handleSubmit.bind(this)} className="edit-inputs">
 
-          <div className="input-group">
-            <label htmlFor="customer">Customer</label>
+          <div className="input-group custom-select">
+            <label
+              htmlFor="customer"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Customer
+            </label>
             <select
+              className="styled-select"
               name="customer"
               value={this.state.customer}
               onChange={e => this.setState({customer: e.target.value})}
@@ -48,9 +53,14 @@ class NewVisit extends Component {
             </select>
           </div>
 
-          <div className="input-group">
-            <label htmlFor="toolbox">Toolbox</label>
+          <div className="input-group custom-select">
+            <label
+              htmlFor="toolbox"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Toolbox
+            </label>
             <select
+              className="styled-select"
               name="toolbox"
               value={this.state.toolbox}
               onChange={e => this.setState({toolbox: e.target.value})}
@@ -64,9 +74,14 @@ class NewVisit extends Component {
             </select>
           </div>
 
-          <div className="input-group">
-            <label htmlFor="worktrade">Worktrade?</label>
+          <div className="input-group custom-select">
+            <label
+              htmlFor="worktrade"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Worktrade?
+            </label>
             <select
+              className="styled-select"
               name="worktrade"
               value={this.state.worktrade}
               onChange={e => this.setState({worktrade: e.target.value})}
@@ -78,8 +93,13 @@ class NewVisit extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="reason">Reason for visit</label>
+            <label
+              htmlFor="reason"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Reason for visit
+            </label>
             <input
+              className="form-input"
               name="reason"
               type="text"
               value={this.state.reason}
@@ -88,8 +108,13 @@ class NewVisit extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="departed">Departed</label>
+            <label
+              htmlFor="departed"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Departed
+            </label>
             <input
+              className="form-input"
               name="departed"
               type="date"
               value={this.state.departed}

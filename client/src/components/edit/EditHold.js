@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { editHold, getHoldById } from '../../redux/actions/holdsActions'
 import isEmpty from '../../validation/is-empty'

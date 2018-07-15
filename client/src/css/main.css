@@ -613,7 +613,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 30%; }
+        width: 50%; }
         .content .comments-footer .comment-form .add-comment-form .comment-input {
           padding-top: 3rem; }
         .content .comments-footer .comment-form .add-comment-form .new-comment-input {
@@ -651,7 +651,7 @@ body {
           color: #18d369; }
       .content .comments-footer .comment-form .new-comment-btn {
         margin: auto;
-        margin-left: 15rem;
+        margin-left: 20rem;
         height: 25%;
         padding: 1rem 2rem;
         background-color: #18d369;

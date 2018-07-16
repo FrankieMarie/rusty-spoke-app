@@ -619,7 +619,7 @@ body {
           font-size: 1.1rem;
         }
 
-        .hold-content, .visit-content {
+        .hold-content, .visit-content, .shift-content {
           color: $dark;
           font-size: 1.4rem;
           letter-spacing: .05rem;
@@ -699,6 +699,7 @@ body {
         margin-left: auto;
         grid-column: 2;
         text-align: end;
+        font-size: 1.2rem;
         background-color: $primary;
         color: $dark;
         text-decoration: none;
@@ -739,6 +740,48 @@ body {
     .edit-inputs {
       width: 55vw;
       margin-top: 4rem;
+    }
+
+     /* Edit shift form btn */
+    .update-shift-btn {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      background-color: $primary;
+      color: white;
+      border: 1px solid $primary;
+      border-radius: 100px;
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      transition: all .2s;
+      position: relative;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        background-color: $primary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+      }
+
+      &:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 

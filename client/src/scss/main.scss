@@ -575,8 +575,8 @@ body {
     }
   }
 
-  /* Holds + Current Visits */
-  .all-holds, .all-visits {
+  /* Holds + Current Visits + Shifts */
+  .all-holds, .all-visits, .all-shifts {
     display: flex;
     flex-direction: column;
     margin: 3rem 4rem 0 4rem;
@@ -594,7 +594,7 @@ body {
     }
   }
 
-  .hold, .visit {
+  .hold, .visit, .shift {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $primary;
@@ -602,11 +602,11 @@ body {
     padding-bottom: 1rem;
     position: relative;
 
-    .hold-item, .visit-item {
+    .hold-item, .visit-item, .shift-item {
       list-style: none;
       padding: .5rem 0;
 
-      .hold-info, .visit-info {
+      .hold-info, .visit-info, .shift-info {
         border-bottom: 1px dotted $light;
         width: 50%;
         display: flex;

@@ -237,7 +237,7 @@ body {
   /* New shift */
   /* Customers */
   /* Staff */
-  /* Holds + Current Visits */
+  /* Holds + Current Visits + Shifts */
   /* Customer by id */
   /* Comments */ }
   .content .date-time {
@@ -434,53 +434,53 @@ body {
         .content .all-staff .individual-staff .staff-info small {
           color: #4c4947;
           text-transform: uppercase; }
-  .content .all-holds, .content .all-visits {
+  .content .all-holds, .content .all-visits, .content .all-shifts {
     display: flex;
     flex-direction: column;
     margin: 3rem 4rem 0 4rem; }
-    .content .all-holds .visit-name, .content .all-visits .visit-name {
+    .content .all-holds .visit-name, .content .all-visits .visit-name, .content .all-shifts .visit-name {
       font-size: 1.6rem;
       padding-bottom: .5rem;
       text-decoration: none;
       color: #18d369;
       font-weight: 700; }
-      .content .all-holds .visit-name:hover, .content .all-visits .visit-name:hover {
+      .content .all-holds .visit-name:hover, .content .all-visits .visit-name:hover, .content .all-shifts .visit-name:hover {
         text-decoration: underline; }
-  .content .hold, .content .visit {
+  .content .hold, .content .visit, .content .shift {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #18d369;
     margin: 1rem 0;
     padding-bottom: 1rem;
     position: relative; }
-    .content .hold .hold-item, .content .hold .visit-item, .content .visit .hold-item, .content .visit .visit-item {
+    .content .hold .hold-item, .content .hold .visit-item, .content .hold .shift-item, .content .visit .hold-item, .content .visit .visit-item, .content .visit .shift-item, .content .shift .hold-item, .content .shift .visit-item, .content .shift .shift-item {
       list-style: none;
       padding: .5rem 0; }
-      .content .hold .hold-item .hold-info, .content .hold .hold-item .visit-info, .content .hold .visit-item .hold-info, .content .hold .visit-item .visit-info, .content .visit .hold-item .hold-info, .content .visit .hold-item .visit-info, .content .visit .visit-item .hold-info, .content .visit .visit-item .visit-info {
+      .content .hold .hold-item .hold-info, .content .hold .hold-item .visit-info, .content .hold .hold-item .shift-info, .content .hold .visit-item .hold-info, .content .hold .visit-item .visit-info, .content .hold .visit-item .shift-info, .content .hold .shift-item .hold-info, .content .hold .shift-item .visit-info, .content .hold .shift-item .shift-info, .content .visit .hold-item .hold-info, .content .visit .hold-item .visit-info, .content .visit .hold-item .shift-info, .content .visit .visit-item .hold-info, .content .visit .visit-item .visit-info, .content .visit .visit-item .shift-info, .content .visit .shift-item .hold-info, .content .visit .shift-item .visit-info, .content .visit .shift-item .shift-info, .content .shift .hold-item .hold-info, .content .shift .hold-item .visit-info, .content .shift .hold-item .shift-info, .content .shift .visit-item .hold-info, .content .shift .visit-item .visit-info, .content .shift .visit-item .shift-info, .content .shift .shift-item .hold-info, .content .shift .shift-item .visit-info, .content .shift .shift-item .shift-info {
         border-bottom: 1px dotted #ceccce;
         width: 50%;
         display: flex;
         align-content: space-between; }
-        .content .hold .hold-item .hold-info .small, .content .hold .hold-item .visit-info .small, .content .hold .visit-item .hold-info .small, .content .hold .visit-item .visit-info .small, .content .visit .hold-item .hold-info .small, .content .visit .hold-item .visit-info .small, .content .visit .visit-item .hold-info .small, .content .visit .visit-item .visit-info .small {
+        .content .hold .hold-item .hold-info .small, .content .hold .hold-item .visit-info .small, .content .hold .hold-item .shift-info .small, .content .hold .visit-item .hold-info .small, .content .hold .visit-item .visit-info .small, .content .hold .visit-item .shift-info .small, .content .hold .shift-item .hold-info .small, .content .hold .shift-item .visit-info .small, .content .hold .shift-item .shift-info .small, .content .visit .hold-item .hold-info .small, .content .visit .hold-item .visit-info .small, .content .visit .hold-item .shift-info .small, .content .visit .visit-item .hold-info .small, .content .visit .visit-item .visit-info .small, .content .visit .visit-item .shift-info .small, .content .visit .shift-item .hold-info .small, .content .visit .shift-item .visit-info .small, .content .visit .shift-item .shift-info .small, .content .shift .hold-item .hold-info .small, .content .shift .hold-item .visit-info .small, .content .shift .hold-item .shift-info .small, .content .shift .visit-item .hold-info .small, .content .shift .visit-item .visit-info .small, .content .shift .visit-item .shift-info .small, .content .shift .shift-item .hold-info .small, .content .shift .shift-item .visit-info .small, .content .shift .shift-item .shift-info .small {
           color: #4c4947;
           text-transform: uppercase;
           width: 50%;
           font-size: 1.1rem; }
-        .content .hold .hold-item .hold-info .hold-content, .content .hold .hold-item .hold-info .visit-content, .content .hold .hold-item .visit-info .hold-content, .content .hold .hold-item .visit-info .visit-content, .content .hold .visit-item .hold-info .hold-content, .content .hold .visit-item .hold-info .visit-content, .content .hold .visit-item .visit-info .hold-content, .content .hold .visit-item .visit-info .visit-content, .content .visit .hold-item .hold-info .hold-content, .content .visit .hold-item .hold-info .visit-content, .content .visit .hold-item .visit-info .hold-content, .content .visit .hold-item .visit-info .visit-content, .content .visit .visit-item .hold-info .hold-content, .content .visit .visit-item .hold-info .visit-content, .content .visit .visit-item .visit-info .hold-content, .content .visit .visit-item .visit-info .visit-content {
+        .content .hold .hold-item .hold-info .hold-content, .content .hold .hold-item .hold-info .visit-content, .content .hold .hold-item .visit-info .hold-content, .content .hold .hold-item .visit-info .visit-content, .content .hold .hold-item .shift-info .hold-content, .content .hold .hold-item .shift-info .visit-content, .content .hold .visit-item .hold-info .hold-content, .content .hold .visit-item .hold-info .visit-content, .content .hold .visit-item .visit-info .hold-content, .content .hold .visit-item .visit-info .visit-content, .content .hold .visit-item .shift-info .hold-content, .content .hold .visit-item .shift-info .visit-content, .content .hold .shift-item .hold-info .hold-content, .content .hold .shift-item .hold-info .visit-content, .content .hold .shift-item .visit-info .hold-content, .content .hold .shift-item .visit-info .visit-content, .content .hold .shift-item .shift-info .hold-content, .content .hold .shift-item .shift-info .visit-content, .content .visit .hold-item .hold-info .hold-content, .content .visit .hold-item .hold-info .visit-content, .content .visit .hold-item .visit-info .hold-content, .content .visit .hold-item .visit-info .visit-content, .content .visit .hold-item .shift-info .hold-content, .content .visit .hold-item .shift-info .visit-content, .content .visit .visit-item .hold-info .hold-content, .content .visit .visit-item .hold-info .visit-content, .content .visit .visit-item .visit-info .hold-content, .content .visit .visit-item .visit-info .visit-content, .content .visit .visit-item .shift-info .hold-content, .content .visit .visit-item .shift-info .visit-content, .content .visit .shift-item .hold-info .hold-content, .content .visit .shift-item .hold-info .visit-content, .content .visit .shift-item .visit-info .hold-content, .content .visit .shift-item .visit-info .visit-content, .content .visit .shift-item .shift-info .hold-content, .content .visit .shift-item .shift-info .visit-content, .content .shift .hold-item .hold-info .hold-content, .content .shift .hold-item .hold-info .visit-content, .content .shift .hold-item .visit-info .hold-content, .content .shift .hold-item .visit-info .visit-content, .content .shift .hold-item .shift-info .hold-content, .content .shift .hold-item .shift-info .visit-content, .content .shift .visit-item .hold-info .hold-content, .content .shift .visit-item .hold-info .visit-content, .content .shift .visit-item .visit-info .hold-content, .content .shift .visit-item .visit-info .visit-content, .content .shift .visit-item .shift-info .hold-content, .content .shift .visit-item .shift-info .visit-content, .content .shift .shift-item .hold-info .hold-content, .content .shift .shift-item .hold-info .visit-content, .content .shift .shift-item .visit-info .hold-content, .content .shift .shift-item .visit-info .visit-content, .content .shift .shift-item .shift-info .hold-content, .content .shift .shift-item .shift-info .visit-content {
           color: #222022;
           font-size: 1.4rem;
           letter-spacing: .05rem; }
-        .content .hold .hold-item .hold-info .hold-name, .content .hold .hold-item .visit-info .hold-name, .content .hold .visit-item .hold-info .hold-name, .content .hold .visit-item .visit-info .hold-name, .content .visit .hold-item .hold-info .hold-name, .content .visit .hold-item .visit-info .hold-name, .content .visit .visit-item .hold-info .hold-name, .content .visit .visit-item .visit-info .hold-name {
+        .content .hold .hold-item .hold-info .hold-name, .content .hold .hold-item .visit-info .hold-name, .content .hold .hold-item .shift-info .hold-name, .content .hold .visit-item .hold-info .hold-name, .content .hold .visit-item .visit-info .hold-name, .content .hold .visit-item .shift-info .hold-name, .content .hold .shift-item .hold-info .hold-name, .content .hold .shift-item .visit-info .hold-name, .content .hold .shift-item .shift-info .hold-name, .content .visit .hold-item .hold-info .hold-name, .content .visit .hold-item .visit-info .hold-name, .content .visit .hold-item .shift-info .hold-name, .content .visit .visit-item .hold-info .hold-name, .content .visit .visit-item .visit-info .hold-name, .content .visit .visit-item .shift-info .hold-name, .content .visit .shift-item .hold-info .hold-name, .content .visit .shift-item .visit-info .hold-name, .content .visit .shift-item .shift-info .hold-name, .content .shift .hold-item .hold-info .hold-name, .content .shift .hold-item .visit-info .hold-name, .content .shift .hold-item .shift-info .hold-name, .content .shift .visit-item .hold-info .hold-name, .content .shift .visit-item .visit-info .hold-name, .content .shift .visit-item .shift-info .hold-name, .content .shift .shift-item .hold-info .hold-name, .content .shift .shift-item .visit-info .hold-name, .content .shift .shift-item .shift-info .hold-name {
           text-decoration: none;
           color: #18d369;
           font-weight: 700; }
-          .content .hold .hold-item .hold-info .hold-name:hover, .content .hold .hold-item .visit-info .hold-name:hover, .content .hold .visit-item .hold-info .hold-name:hover, .content .hold .visit-item .visit-info .hold-name:hover, .content .visit .hold-item .hold-info .hold-name:hover, .content .visit .hold-item .visit-info .hold-name:hover, .content .visit .visit-item .hold-info .hold-name:hover, .content .visit .visit-item .visit-info .hold-name:hover {
+          .content .hold .hold-item .hold-info .hold-name:hover, .content .hold .hold-item .visit-info .hold-name:hover, .content .hold .hold-item .shift-info .hold-name:hover, .content .hold .visit-item .hold-info .hold-name:hover, .content .hold .visit-item .visit-info .hold-name:hover, .content .hold .visit-item .shift-info .hold-name:hover, .content .hold .shift-item .hold-info .hold-name:hover, .content .hold .shift-item .visit-info .hold-name:hover, .content .hold .shift-item .shift-info .hold-name:hover, .content .visit .hold-item .hold-info .hold-name:hover, .content .visit .hold-item .visit-info .hold-name:hover, .content .visit .hold-item .shift-info .hold-name:hover, .content .visit .visit-item .hold-info .hold-name:hover, .content .visit .visit-item .visit-info .hold-name:hover, .content .visit .visit-item .shift-info .hold-name:hover, .content .visit .shift-item .hold-info .hold-name:hover, .content .visit .shift-item .visit-info .hold-name:hover, .content .visit .shift-item .shift-info .hold-name:hover, .content .shift .hold-item .hold-info .hold-name:hover, .content .shift .hold-item .visit-info .hold-name:hover, .content .shift .hold-item .shift-info .hold-name:hover, .content .shift .visit-item .hold-info .hold-name:hover, .content .shift .visit-item .visit-info .hold-name:hover, .content .shift .visit-item .shift-info .hold-name:hover, .content .shift .shift-item .hold-info .hold-name:hover, .content .shift .shift-item .visit-info .hold-name:hover, .content .shift .shift-item .shift-info .hold-name:hover {
             text-decoration: underline; }
-    .content .hold .hold-btns, .content .visit .hold-btns {
+    .content .hold .hold-btns, .content .visit .hold-btns, .content .shift .hold-btns {
       display: flex;
       justify-content: space-between;
       margin-top: .5rem; }
-    .content .hold .hold-edit, .content .visit .hold-edit {
+    .content .hold .hold-edit, .content .visit .hold-edit, .content .shift .hold-edit {
       display: flex;
       justify-content: flex-end;
       background-color: #18d369;
@@ -492,13 +492,13 @@ body {
       cursor: pointer;
       letter-spacing: .025rem;
       transition: all .2s ease-in-out; }
-      .content .hold .hold-edit .hold-edit-icon, .content .visit .hold-edit .hold-edit-icon {
+      .content .hold .hold-edit .hold-edit-icon, .content .visit .hold-edit .hold-edit-icon, .content .shift .hold-edit .hold-edit-icon {
         padding-right: .5rem; }
-      .content .hold .hold-edit:hover, .content .visit .hold-edit:hover {
+      .content .hold .hold-edit:hover, .content .visit .hold-edit:hover, .content .shift .hold-edit:hover {
         transform: scale(1.1); }
-      .content .hold .hold-edit:focus, .content .visit .hold-edit:focus {
+      .content .hold .hold-edit:focus, .content .visit .hold-edit:focus, .content .shift .hold-edit:focus {
         outline: none; }
-    .content .hold .hold-delete, .content .visit .hold-delete {
+    .content .hold .hold-delete, .content .visit .hold-delete, .content .shift .hold-delete {
       display: flex;
       background-color: transparent;
       color: #ff2d26;
@@ -511,10 +511,10 @@ body {
       letter-spacing: .025rem;
       transition: all .2s ease-in-out;
       margin-left: 5rem; }
-      .content .hold .hold-delete:hover, .content .visit .hold-delete:hover {
+      .content .hold .hold-delete:hover, .content .visit .hold-delete:hover, .content .shift .hold-delete:hover {
         background-color: #ff2d26;
         color: #f5f5f5; }
-      .content .hold .hold-delete:focus, .content .visit .hold-delete:focus {
+      .content .hold .hold-delete:focus, .content .visit .hold-delete:focus, .content .shift .hold-delete:focus {
         outline: none; }
   .content .edit-hold-btn {
     left: 50%;

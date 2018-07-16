@@ -5,19 +5,47 @@ class Shift extends Component {
   render() {
     const { start, end, floatStart, floatEnd, staff } = this.props.shift
     return (
-      <div>
-        <p>Shift Start: {moment(start).format('MMMM D, YYYY, H:mm a')}</p>
-        <p>Shift End: {moment(end).format('MMMM D, YYYY, H:mm a')}</p>
-        <p>Float Start: {floatStart}</p>
-        <p>Float End: {floatEnd}</p>
-        <div className="shift-staff">
-          <p>Staff:</p>
-          <p><i className="fas fa-angle-right"></i> {staff[0].one.name}</p>
-          {staff[0].two ? <p><i className="fas fa-angle-right"></i> {staff[0].two.name}</p> : null}
-          {staff[0].three ? <p><i className="fas fa-angle-right"></i> {staff[0].three.name}</p> : null}
-          {staff[0].four ? <p><i className="fas fa-angle-right"></i> {staff[0].four.name}</p> : null}
-        </div>
-      </div>
+      <ul className="shift">
+
+        <li className="shift-item">
+          <p className="shift-info">
+            <small className="small">Shift Start: </small>
+            <span>{moment(start).format('MMMM D, YYYY, H:mm a')}</span>
+          </p>
+        </li>
+
+        <li className="shift-item">
+          <p className="shift-info">
+            <small className="small">Shift End: </small>
+            <span>{moment(end).format('MMMM D, YYYY, H:mm a')}</span>
+          </p>
+        </li>
+
+        <li className="shift-item">
+          <p className="shift-info">
+            <small className="small">Float Start: </small>
+            <span>{floatStart}</span>
+          </p>
+        </li>
+
+        <li className="shift-item">
+          <p className="shift-info">
+            <small className="small">Float End: </small>
+            <span>{floatEnd}</span>
+          </p>
+        </li>
+
+        <li className="shift-item shift-staff">
+          <p className="shift-info">
+            <small className="small">Staff:</small>
+            <span>{staff[0].one.name}</span>
+            {staff[0].two ? <span>, {staff[0].two.name}</span> : null}
+            {staff[0].three ? <span>, {staff[0].three.name}</span> : null}
+            {staff[0].four ? <span>, {staff[0].four.name}</span> : null}
+          </p>
+        </li>
+
+      </ul>
     )
   }
 }

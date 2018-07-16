@@ -23,6 +23,11 @@ export default function(state = initialState, action) {
         shifts: action.payload,
         loading: false
       }
+    case START_SHIFT:
+      return {
+        ...state,
+        shift: action.payload
+      }
     case GET_SHIFT_BY_ID:
       return {
         ...state,

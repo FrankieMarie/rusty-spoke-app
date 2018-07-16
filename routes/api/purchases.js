@@ -10,7 +10,7 @@ const Customer = require('../../models/Customer')
 // @desc      Get all purchases
 // @access    Private
 router.get('/all', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Purchase.find()
+  Purchase.find().sort({ date: -1 })
     .populate('customer', ['name'], Customer)
     .then(purchase => res.json(purchase))
     .catch(err => res.status(404).json(err))

@@ -10,7 +10,7 @@ const Customer = require('../../models/Customer')
 // @desc      Get all holds
 // @access    Private
 router.get('/all', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Hold.find()
+  Hold.find().sort({ date: -1 })
   .populate('customer', ['name', '_id'], Customer)
   .then(hold => res.json(hold))
   .catch(err => res.status(404).json(err))

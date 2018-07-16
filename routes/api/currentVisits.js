@@ -13,7 +13,7 @@ const validateCurrentVisitInput = require('../../validation/currentVisit')
 // @desc      Get all current visits
 // @access    Private
 router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
-  CurrentVisit.find()
+  CurrentVisit.find().sort({ arrived: -1 })
     .populate('customer', ['name', '_id'], Customer)
     .then(visit => res.json(visit))
     .catch(err => res.status(404).json(err))

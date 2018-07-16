@@ -24,7 +24,7 @@ export default function(state = initialState, action) {
     case POST_COMMENT:
       return {
         ...state,
-        comment: action.payload
+        comments: [action.payload, ...state.comments]
       }
     default:
       return state

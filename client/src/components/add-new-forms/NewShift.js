@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { getAllStaff } from '../../redux/actions/staffActions'
+import { newShift } from '../../redux/actions/shiftActions'
 
 class NewShift extends Component {
   render() {
@@ -10,7 +13,11 @@ class NewShift extends Component {
         <form className="new-shift-form">
 
           <div className="input-group">
-            <label htmlFor="floatStart">Float Start</label>
+            <label
+              htmlFor="floatStart"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Float Start
+            </label>
             <input
               name="floatStart"
               type="number"
@@ -18,7 +25,11 @@ class NewShift extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="floatEnd">Float End</label>
+            <label
+              htmlFor="floatEnd"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Float End
+            </label>
             <input
               name="floatEnd"
               type="number"
@@ -26,15 +37,23 @@ class NewShift extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="staff">Staff</label>
+            <label
+              htmlFor="staffOne"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Staff
+            </label>
             <input
-              name="staff"
+              name="staffOne"
               type="select"
             />
           </div>
 
           <div className="input-group">
-            <label htmlFor="shiftEnd">Shift End</label>
+            <label
+              htmlFor="shiftEnd"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Shift End
+            </label>
             <input
               name="shiftEnd"
             />
@@ -48,4 +67,9 @@ class NewShift extends Component {
   }
 }
 
-export default NewShift
+const mapStateToProps = state => ({
+  staff: state.staff,
+  auth: state.auth
+})
+
+export default connect(mapStateToProps, { getAllStaff, newShift })(NewShift)

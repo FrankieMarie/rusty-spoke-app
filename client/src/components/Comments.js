@@ -15,7 +15,7 @@ class Comments extends Component {
     if (!comments) {
       allComments = <div></div>
     } else {
-      allComments = comments.map(comment => <Comment key={comment._id} comment={comment} />)
+      allComments = comments.map(comment => <Comment key={comment.date} comment={comment} />)
     }
     return (
       <div>

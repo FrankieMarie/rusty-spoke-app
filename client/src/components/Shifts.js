@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getAllShifts } from '../redux/actions/shiftActions'
 import Shift from './layout/Shift'
+import { Link } from 'react-router-dom'
 
 class Shifts extends Component {
   componentDidMount() {
@@ -19,9 +20,16 @@ class Shifts extends Component {
     return (
       <div>
         <h1 className="shifts-h1">Shifts</h1>
-        <div className="all-shifts">
+        <div
+          className="all-shifts"
+          style={{marginBottom: "6rem"}}>
           {allShifts}
         </div>
+        <footer className="staff-footer" >
+          <Link to="/new-shift" className="new-staff-link" >
+            <i className="far fa-clock"></i> Start Shift
+          </Link>
+        </footer>
       </div>
     )
   }

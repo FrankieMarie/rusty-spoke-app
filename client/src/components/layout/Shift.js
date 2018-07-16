@@ -17,7 +17,8 @@ class Shift extends Component {
         <li className="shift-item">
           <p className="shift-info">
             <small className="small">Shift End: </small>
-            <span className="shift-content">{moment(end).format('MMMM D, YYYY, H:mm a')}</span>
+            {/* <span className="shift-content">{moment(end).format('MMMM D, YYYY, H:mm a')}</span> */}
+            {end ? <span className="shift-content">{moment(end).format('MMMM D, YYYY, H:mm a')}</span> : <span className="shift-content">(Currently in shift hours)</span>}
           </p>
         </li>
 

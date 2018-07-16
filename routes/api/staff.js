@@ -12,7 +12,7 @@ const validateRegisterStaffInput = require('../../validation/registerStaff')
 // @desc      Get all staff members
 // @access    Private
 router.get('/all', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Staff.find()
+  Staff.find().sort({ name: 'ascending' })
     .then(staff => res.json(staff))
     .catch(err => res.status(404).json(err))
 })

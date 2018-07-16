@@ -10,7 +10,7 @@ const Staff = require('../../models/Staff')
 // @desc      Get all shifts
 // @access    Private
 router.get('/all', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Shift.find()
+  Shift.find().sort({ start: -1 })
     .populate('staff.one', ['name', 'email'], Staff)
     .populate('staff.two', ['name', 'email'], Staff)
     .populate('staff.three', ['name', 'email'], Staff)

@@ -39,7 +39,7 @@ export const postComment = (comment, history) => dispatch => {
         type: POST_COMMENT,
         payload: res.data
       })
-      history.push('/comments')
+
     })
     .catch(err =>
       dispatch({

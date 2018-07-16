@@ -14,7 +14,7 @@ const validateCommentInput = require('../../validation/comment')
 // @desc      Get all comments
 // @access    Private
 router.get('/all', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Comment.find()
+  Comment.find().sort({ date: -1 })
     .populate('resource', ['name'], Customer)
     .populate('author', ['name'], Staff)
     .then(comment => res.json(comment))
@@ -38,7 +38,12 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
     body: req.body.body
   })
   comment.save()
-    .then(comment => res.json(comment))
+    .then(comment => {
+      Comment.findById(comment._id)
+      .populate('resource', ['name'], Customer)
+      .populate('author', ['name'], Staff)
+      .then(newComment => res.json(newComment))
+    })
     .catch(err => res.json(err))
 })
 

@@ -33,6 +33,25 @@ export const setShiftsLoading = () => {
   }
 }
 
+// New shift
+export const newShift = (shift, history) => dispatch => {
+  axios.post('http://localhost:5000/api/shifts', shift)
+    .then(res => {
+      dispatch({
+        type: START_SHIFT,
+        payload: res.data
+      })
+      history.push('/shifts')
+    }
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: {}
+      })
+    )
+}
+
 // Get shift by id
 export const getShiftById = (id) => dispatch => {
   dispatch(setShiftsLoading())

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getAllCustomers } from '../../redux/actions/customerActions'
+import { newPurchase } from '../../redux/actions/purchaseActions'
 
 class NewPurchase extends Component {
   state = {
@@ -31,8 +32,13 @@ class NewPurchase extends Component {
         <form onSubmit={this.handleSubmit.bind(this)} className="new-purchase-form">
 
           <div className="input-group">
-            <label htmlFor="customer">Customer</label>
+            <label
+              htmlFor="customer"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Customer
+            </label>
             <select
+              className="styled-select"
               name="customer"
               value={this.state.customer}
               onChange={e => this.setState({customer: e.target.value})}
@@ -43,8 +49,13 @@ class NewPurchase extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="item">Item</label>
+            <label
+              htmlFor="item"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Item
+            </label>
             <input
+              className="form-input"
               name="item"
               type="text"
               value={this.state.item}
@@ -53,8 +64,13 @@ class NewPurchase extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="description">Description</label>
+            <label
+              htmlFor="description"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Description
+            </label>
             <input
+              className="form-input"
               name="description"
               type="text"
               value={this.state.description}
@@ -63,8 +79,13 @@ class NewPurchase extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="costHours">Cost Hours</label>
+            <label
+              htmlFor="costHours"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Cost Hours
+            </label>
             <input
+              className="form-input"
               name="costHours"
               type="number"
               value={this.state.costHours}
@@ -73,8 +94,13 @@ class NewPurchase extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="costCash">Cost Cash</label>
+            <label
+              htmlFor="costCash"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Cost Cash
+            </label>
             <input
+              className="form-input"
               name="costCash"
               type="number"
               value={this.state.costCash}
@@ -95,4 +121,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 })
 
-export default connect(mapStateToProps, { getAllCustomers })(NewPurchase)
+export default connect(mapStateToProps, { getAllCustomers, newPurchase })(NewPurchase)

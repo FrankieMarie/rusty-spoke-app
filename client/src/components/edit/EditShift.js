@@ -65,7 +65,11 @@ class EditShift extends Component {
           </div> */}
 
           <div className="input-group">
-            <label htmlFor="floatStart">Float Start</label>
+            <label
+              htmlFor="floatStart"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Float Start
+            </label>
             <input
               className="form-input"
               type="text"
@@ -76,7 +80,11 @@ class EditShift extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="floatEnd">Float End</label>
+            <label
+              htmlFor="floatEnd"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Float End
+            </label>
             <input
               className="form-input"
               type="text"

@@ -576,7 +576,7 @@ body {
   }
 
   /* Holds + Current Visits + Shifts */
-  .all-holds, .all-visits, .all-shifts {
+  .all-holds, .all-visits, .all-shifts, .all-purchases {
     display: flex;
     flex-direction: column;
     margin: 3rem 4rem 0 4rem;
@@ -594,7 +594,7 @@ body {
     }
   }
 
-  .hold, .visit, .shift {
+  .hold, .visit, .shift, .purchase {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $primary;
@@ -602,11 +602,11 @@ body {
     padding-bottom: 1rem;
     position: relative;
 
-    .hold-item, .visit-item, .shift-item {
+    .hold-item, .visit-item, .shift-item, .purchase-item {
       list-style: none;
       padding: .5rem 0;
 
-      .hold-info, .visit-info, .shift-info {
+      .hold-info, .visit-info, .shift-info, .purchase-info {
         border-bottom: 1px dotted $light;
         width: 50%;
         display: flex;
@@ -619,7 +619,7 @@ body {
           font-size: 1.1rem;
         }
 
-        .hold-content, .visit-content, .shift-content {
+        .hold-content, .visit-content, .shift-content, .purchase-content {
           color: $dark;
           font-size: 1.4rem;
           letter-spacing: .05rem;
@@ -993,5 +993,10 @@ body {
         }
       }
     }
+  }
+
+  /* purchase-footer */
+  .purchase-footer {
+    margin-top: 4rem;
   }
 }

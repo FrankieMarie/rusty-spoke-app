@@ -1,7 +1,9 @@
 import {
   GET_PURCHASES,
   PURCHASES_LOADING,
-  NEW_PURCHASE
+  NEW_PURCHASE,
+  GET_PURCHASE_BY_ID,
+  EDIT_PURCHASE
 } from '../actions/types'
 
 const initialState = {
@@ -22,6 +24,17 @@ export default function(state = initialState, action) {
         loading: false
       }
     case NEW_PURCHASE:
+      return {
+        ...state,
+        purchase: action.payload
+      }
+    case GET_PURCHASE_BY_ID:
+      return {
+        ...state,
+        purchase: action.payload,
+        loading: false
+      }
+    case EDIT_PURCHASE:
       return {
         ...state,
         purchase: action.payload

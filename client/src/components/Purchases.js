@@ -20,7 +20,11 @@ class Purchases extends Component {
     return (
       <div>
         <h1 className="purchases-h1">Purchases</h1>
-        {allPurchases}
+        <div
+          className="all-purchases"
+          style={{marginBottom: "6rem"}}>
+          {allPurchases}
+        </div>
         <footer className="customers-footer">
           <Link
             to="/new-purchase"

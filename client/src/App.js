@@ -33,6 +33,7 @@ import EditCustomer from './components/edit/EditCustomer'
 import EditStaff from './components/edit/EditStaff'
 import EditHold from './components/edit/EditHold'
 import EditShift from './components/edit/EditShift'
+import EditPurchase from './components/edit/EditPurchase'
 
 if(localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken)
@@ -66,6 +67,7 @@ class App extends Component {
                 <PrivateRoute exact path="/new-visit" component={NewVisit} />
                 <PrivateRoute exact path="/purchases" component={Purchases} />
                 <PrivateRoute exact path="/new-purchase" component={NewPurchase} />
+                <PrivateRoute exact path="/edit-purchase/:id" component={EditPurchase} />
                 <PrivateRoute exact path="/holds" component={Holds} />
                 <PrivateRoute exact path="/new-hold" component={NewHold} />
                 <PrivateRoute exact path="/edit-hold/:id" component={EditHold} />

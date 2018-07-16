@@ -690,6 +690,34 @@ body {
         outline: none;
       }
     }
+
+    .shift-btns {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .shift-edit {
+        margin-left: auto;
+        grid-column: 2;
+        text-align: end;
+        background-color: $primary;
+        color: $dark;
+        text-decoration: none;
+        border: 1px solid $primary;
+        border-radius: 100px;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        letter-spacing: .025rem;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
   }
 
   .edit-hold-btn {

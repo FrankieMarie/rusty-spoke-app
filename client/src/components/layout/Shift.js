@@ -3,7 +3,7 @@ import moment from 'moment'
 
 class Shift extends Component {
   render() {
-    const { start, end, floatStart, floatEnd, staff } = this.props.shift
+    const { start, end, floatStart, floatEnd, staff, _id } = this.props.shift
     return (
       <ul className="shift">
 
@@ -44,6 +44,10 @@ class Shift extends Component {
             {staff[0].four ? <span>, {staff[0].four.name}</span> : null}
           </p>
         </li>
+
+        <div className="shift-btns">
+          <a href={`/edit-shift/${_id}`} className="shift-edit"><i className="fas fa-pencil-alt"></i> Edit Shift</a>
+        </div>
 
       </ul>
     )

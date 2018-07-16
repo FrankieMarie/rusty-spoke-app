@@ -24,6 +24,9 @@ export const PURCHASES_LOADING = 'PURCHASES_LOADING'
 
 export const GET_SHIFTS = 'GET_SHIFTS'
 export const SHIFTS_LOADING = 'SHIFTS_LOADING'
+export const GET_SHIFT_BY_ID = 'GET_SHIFT_BY_ID'
+export const EDIT_SHIFT = 'EDIT_SHIFT'
+export const START_SHIFT = 'START_SHIFT'
 
 export const GET_VISITS = 'GET_VISITS'
 export const VISITS_LOADING = 'VISITS_LOADING'

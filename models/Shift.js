@@ -3,8 +3,8 @@ const Schema = mongoose.Schema
 
 const ShiftSchema = new Schema({
   start: {
-      type: Date,
-      default: Date.now
+    type: Date,
+    default: Date.now
   },
   end: {
     type: Date

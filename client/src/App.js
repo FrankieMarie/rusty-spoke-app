@@ -32,6 +32,7 @@ import NewHold from './components/add-new-forms/NewHold'
 import EditCustomer from './components/edit/EditCustomer'
 import EditStaff from './components/edit/EditStaff'
 import EditHold from './components/edit/EditHold'
+import EditShift from './components/edit/EditShift'
 
 if(localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken)
@@ -71,6 +72,7 @@ class App extends Component {
                 <PrivateRoute exact path="/comments" component={Comments} />
                 <PrivateRoute exact path="/shifts" component={Shifts} />
                 <PrivateRoute exact path="/new-shift" component={NewShift} />
+                <PrivateRoute exact path="/edit-shift/:id" component={EditShift} />
                 <PrivateRoute exact path="/staff" component={Staff} />
                 <PrivateRoute exact path="/edit-staff/:id" component={EditStaff} />
                 <PrivateRoute exact path="/new-staff" component={RegisterStaff} />

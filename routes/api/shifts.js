@@ -40,6 +40,15 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
     .catch(err => res.json(err))
 })
 
+// @route     GET api/shifts/:id
+// @desc      Get shift by id
+// @access    Private
+router.get('/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
+  Shift.findById({ _id: req.params.id })
+    .then(shift => res.json(shift))
+    .catch(err => res.status(404).json({ notfound: 'Shift not found' }))
+})
+
 // @route     POST api/shifts/:id
 // @desc      Edit a shift
 // @access    Private

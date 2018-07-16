@@ -37,7 +37,6 @@ class NewShift extends Component {
             <label htmlFor="shiftEnd">Shift End</label>
             <input
               name="shiftEnd"
-              type="date"
             />
           </div>
 

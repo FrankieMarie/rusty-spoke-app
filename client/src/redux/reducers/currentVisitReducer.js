@@ -1,7 +1,9 @@
 import {
   GET_VISITS,
   VISITS_LOADING,
-  NEW_VISIT
+  NEW_VISIT,
+  GET_VISIT_BY_ID,
+  EDIT_VISIT
 } from '../actions/types'
 
 const initialState = {
@@ -22,6 +24,17 @@ export default function(state = initialState, action) {
         loading: false
       }
     case NEW_VISIT:
+      return {
+        ...state,
+        visit: action.payload
+      }
+    case GET_VISIT_BY_ID:
+      return {
+        ...state,
+        visit: action.payload,
+        loading: false
+      }
+    case EDIT_VISIT:
       return {
         ...state,
         visit: action.payload

@@ -44,4 +44,32 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
     .catch(err => res.json(err))
 })
 
+// @route     GET api/visits/:id
+// @desc      Get visit by id
+// @access    Private
+router.get('/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
+  CurrentVisit.findById({ _id: req.params.id })
+    .then(visit => res.json(visit))
+    .catch(err => res.status(404).json({ notfound: 'Visit not found' }))
+})
+
+// @route     POST api/visits/:id
+// @desc      Edit a visit
+// @access    Private
+router.post('/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
+  const visitFields = {}
+  visitFields.visit = req.params.id
+  if(req.body.customer) visitFields.customer = req.body.customer
+  if(req.body.arrived) visitFields.arrived = req.body.arrived
+  if(req.body.reason) visitFields.reason = req.body.reason
+  if(req.body.toolbox) visitFields.toolbox = req.body.toolbox
+  if(req.body.worktrade) visitFields.worktrade = req.body.worktrade
+  if(req.body.departed) visitFields.departed = req.body.departed
+  CurrentVisit.findOneAndUpdate(
+    { _id: req.params.id },
+    { $set: visitFields },
+    { new: true }
+  ).then(visit => res.json(visit))
+})
+
 module.exports = router

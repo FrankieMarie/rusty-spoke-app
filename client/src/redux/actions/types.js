@@ -34,6 +34,8 @@ export const START_SHIFT = 'START_SHIFT'
 export const GET_VISITS = 'GET_VISITS'
 export const VISITS_LOADING = 'VISITS_LOADING'
 export const NEW_VISIT = 'NEW_VISIT'
+export const GET_VISIT_BY_ID = 'GET_VISIT_BY_ID'
+export const EDIT_VISIT = 'EDIT_VISIT'
 
 export const GET_HOLDS = 'GET_HOLDS'
 export const HOLDS_LOADING = 'HOLDS_LOADING'

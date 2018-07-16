@@ -3,7 +3,9 @@ import {
   GET_VISITS,
   VISITS_LOADING,
   GET_ERRORS,
-  NEW_VISIT
+  NEW_VISIT,
+  GET_VISIT_BY_ID,
+  EDIT_VISIT
 } from './types'
 
 // Get all visits
@@ -41,6 +43,43 @@ export const newVisit = (visit, history) => dispatch => {
       })
       history.push('/current-visits')
     })
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: {}
+      })
+    )
+}
+
+// Get visit by id
+export const getVisitById = (id) => dispatch => {
+  dispatch(setVisitsLoading())
+  axios.get(`http://localhost:5000/api/visits/${id}`)
+    .then(res =>
+      dispatch({
+        type: GET_VISIT_BY_ID,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_VISIT_BY_ID,
+        payload: null
+      })
+    )
+}
+
+// Update visit information
+export const editVisit = (id, visit, history) => dispatch => {
+  axios.post(`http://localhost:5000/api/visits/${id}`, visit)
+    .then(res =>{
+      dispatch({
+        type: EDIT_VISIT,
+        payload: res.data
+      })
+      history.push('/current-visits')
+    }
+    )
     .catch(err =>
       dispatch({
         type: GET_ERRORS,

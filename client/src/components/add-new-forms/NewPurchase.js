@@ -18,6 +18,7 @@ class NewPurchase extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    this.props.newPurchase(this.state, this.props.history)
   }
 
   render() {
@@ -31,7 +32,7 @@ class NewPurchase extends Component {
         <h1 className="purchases-h1">New Purchase</h1>
         <form onSubmit={this.handleSubmit.bind(this)} className="new-purchase-form">
 
-          <div className="input-group">
+          <div className="input-group custom-select">
             <label
               htmlFor="customer"
               style={{color: "#18d369", letterSpacing: ".05rem"}}>

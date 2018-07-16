@@ -297,7 +297,7 @@ body {
     font-weight: 700;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .content .new-shift-form, .content .new-visit-form {
+  .content .new-shift-form, .content .new-visit-form, .content .new-purchase-form {
     margin: 2rem 20rem; }
   .content .all-customers {
     display: flex;

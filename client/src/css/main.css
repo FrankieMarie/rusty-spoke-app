@@ -389,8 +389,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 4rem;
-    margin-bottom: 6rem; }
+    margin-left: 4rem; }
     .content .all-staff .individual-staff {
       margin-bottom: 2rem;
       border-bottom: 1px solid #ceccce;

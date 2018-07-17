@@ -22,7 +22,7 @@ class Staff extends Component {
     return (
       <div>
         <h1 className="staff-h1">Staff</h1>
-        <div className="all-staff">
+        <div className="all-staff" style={{marginBottom: "6rem"}}>
           {allStaff}
         </div>
         <footer className="staff-footer" >

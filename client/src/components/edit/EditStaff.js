@@ -50,9 +50,15 @@ class EditStaff extends Component {
       <div className="edit-form">
         <h1 className="edit-h1">Edit Staff</h1>
         <form onSubmit={this.onSubmit.bind(this)} className="edit-inputs">
+
           <div className="input-group">
-            <label htmlFor="name">Full Name</label>
+            <label
+              htmlFor="name"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Full Name
+            </label>
             <input
+              className="form-input"
               type="text"
               name="name"
               value={this.state.name}
@@ -61,8 +67,13 @@ class EditStaff extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="email">Email</label>
+            <label
+              htmlFor="email"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Email
+            </label>
             <input
+              className="form-input"
               type="text"
               name="email"
               value={this.state.email}
@@ -71,8 +82,13 @@ class EditStaff extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="phone">Phone</label>
+            <label
+              htmlFor="phone"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Phone
+            </label>
             <input
+              className="form-input"
               type="text"
               name="phone"
               value={this.state.phone}
@@ -80,7 +96,7 @@ class EditStaff extends Component {
             />
           </div>
 
-          <button type="submit">Update</button>
+          <button type="submit" className="update-shift-btn">Update</button>
         </form>
       </div>
     )

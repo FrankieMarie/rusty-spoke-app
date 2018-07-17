@@ -54,9 +54,9 @@ class App extends Component {
         <Router>
           <div className="App">
             <Route exact path="/" component={Landing} />
-            <Header />
+            <PrivateRoute component={Header} />
             <main className="container">
-              <Navbar />
+            <PrivateRoute component={Navbar}  />
               <div className="content">
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />

@@ -65,7 +65,12 @@ class RegisterStaff extends Component {
               onChange={e => this.setState({phone: e.target.value})}
             />
           </div>
-          <button type="submit" className="update-shift-btn">Submit</button>
+          <button
+            type="submit"
+            className="update-shift-btn"
+            style={{cursor: "pointer"}}>
+            Submit
+          </button>
         </form>
       </div>
     )

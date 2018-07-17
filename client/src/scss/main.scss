@@ -240,6 +240,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 93vh;
 
   .nav {
     margin-top: 3.5rem;
@@ -301,7 +302,6 @@ body {
 /* Main content */
 .content {
   flex: 1;
-  min-height: 93vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

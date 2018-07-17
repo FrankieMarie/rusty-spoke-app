@@ -96,7 +96,12 @@ class EditStaff extends Component {
             />
           </div>
 
-          <button type="submit" className="update-shift-btn">Update</button>
+          <button
+            type="submit"
+            className="update-shift-btn"
+            style={{cursor: "pointer"}}>
+            Update
+          </button>
         </form>
       </div>
     )

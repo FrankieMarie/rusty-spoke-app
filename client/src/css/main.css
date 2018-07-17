@@ -185,7 +185,8 @@ body {
   flex: 0 0 18%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  min-height: 93vh; }
   .sidebar .nav {
     margin-top: 3.5rem; }
     .sidebar .nav .link {
@@ -230,7 +231,6 @@ body {
 /* Main content */
 .content {
   flex: 1;
-  min-height: 93vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

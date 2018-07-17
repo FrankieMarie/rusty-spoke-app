@@ -40,13 +40,7 @@ class EditCustomer extends Component {
 
   onSubmit(e) {
     e.preventDefault()
-    const customerData = {
-      name: this.state.name,
-      email: this.state.email,
-      phone: this.state.phone,
-      workTradeHours: this.state.workTradeHours
-    }
-    this.props.editCustomer(this.props.match.params.id, customerData, this.props.history)
+    this.props.editCustomer(this.props.match.params.id, this.state, this.props.history)
   }
 
   render() {
@@ -55,8 +49,13 @@ class EditCustomer extends Component {
         <h1 className="edit-h1">Edit Customer</h1>
         <form onSubmit={this.onSubmit.bind(this)} className="edit-inputs">
           <div className="input-group">
-            <label htmlFor="name">Full Name</label>
+            <label
+              htmlFor="name"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Full Name
+            </label>
             <input
+              className="form-input"
               type="text"
               name="name"
               value={this.state.name}
@@ -65,8 +64,13 @@ class EditCustomer extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="email">Email</label>
+            <label
+              htmlFor="email"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Email
+            </label>
             <input
+              className="form-input"
               type="text"
               name="email"
               value={this.state.email}
@@ -75,8 +79,13 @@ class EditCustomer extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="phone">Phone</label>
+            <label
+              htmlFor="phone"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Phone
+            </label>
             <input
+              className="form-input"
               type="text"
               name="phone"
               value={this.state.phone}
@@ -85,8 +94,13 @@ class EditCustomer extends Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="workTradeHours">Work Trade Hours</label>
+            <label
+              htmlFor="workTradeHours"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Work Trade Hours
+            </label>
             <input
+              className="form-input"
               type="text"
               name="workTradeHours"
               value={this.state.workTradeHours}
@@ -94,7 +108,13 @@ class EditCustomer extends Component {
             />
           </div>
 
-          <button type="submit">Update</button>
+          <button
+            type="submit"
+            className="update-shift-btn"
+            style={{cursor: "pointer"}}>
+            Update
+          </button>
+
         </form>
       </div>
     )

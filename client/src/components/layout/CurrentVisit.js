@@ -5,7 +5,8 @@ import moment from 'moment'
 class CurrentVisit extends Component {
   render() {
     const { customer, arrived, departed, reason, worktrade, toolbox, _id } = this.props.visit
-    return (
+    if(!departed){
+      return (
       <div className="visit">
 
         <p className="visit-name">
@@ -45,8 +46,6 @@ class CurrentVisit extends Component {
             </p>
           </li>
 
-          {departed ? <li className="visit-item"><p><small className="small">Departed:</small> <span className="visit-content">{moment(departed).format('MMMM D, YYYY, H:mm a')}</span></p></li> : null}
-
           <div className="shift-btns">
           <a href={`/edit-visit/${_id}`} className="shift-edit"><i className="fas fa-pencil-alt"></i> Edit Visit</a>
         </div>
@@ -54,6 +53,11 @@ class CurrentVisit extends Component {
         </ul>
       </div>
     )
+  } else {
+      return (
+        <div></div>
+      )
+    }
   }
 }
 

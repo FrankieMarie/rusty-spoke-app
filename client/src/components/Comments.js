@@ -27,7 +27,9 @@ class Comments extends Component {
           <h2>Resource</h2>
           <h2>Body</h2>
         </div>
+        <div style={{marginBottom: "23rem"}}>
           {allComments}
+        </div>
         </div>
         <footer className="comments-footer customers-footer">
           <PostComment />

@@ -25,7 +25,7 @@ class Customer extends Component {
             <i className="fas fa-user-edit"></i> Edit
           </a>
           <button onClick={this.onDeleteClick.bind(this)} className="customer-delete">
-            <i className="fas fa-user-times"></i> Delete
+            <i className="fas fa-times"></i>
           </button>
         </div>
 

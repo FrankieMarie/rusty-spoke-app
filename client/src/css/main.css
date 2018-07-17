@@ -300,6 +300,17 @@ body {
     transform: translate(-50%, -50%); }
   .content .new-shift-form, .content .new-visit-form, .content .new-purchase-form {
     margin: 2rem 20rem; }
+  .content .new-shift-staff-selects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+    .content .new-shift-staff-selects .new-shift-select {
+      display: block;
+      background-color: transparent;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 4rem; }
+      .content .new-shift-staff-selects .new-shift-select:focus {
+        outline: none; }
   .content .all-customers {
     display: flex;
     flex-direction: column;

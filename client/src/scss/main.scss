@@ -388,6 +388,23 @@ body {
     margin: 2rem 20rem;
   }
 
+  .new-shift-staff-selects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .new-shift-select {
+      display: block;
+      background-color: transparent;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
   /* Customers */
   .all-customers {
     display: flex;

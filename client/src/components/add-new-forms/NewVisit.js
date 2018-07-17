@@ -36,6 +36,8 @@ class NewVisit extends Component {
 
         <form onSubmit={this.handleSubmit.bind(this)} className="edit-inputs">
 
+        <div className="new-visit-selects">
+
           <div className="input-group custom-select">
             <label
               htmlFor="customer"
@@ -43,7 +45,7 @@ class NewVisit extends Component {
               Customer
             </label>
             <select
-              className="styled-select"
+              className="new-visit-select"
               name="customer"
               value={this.state.customer}
               onChange={e => this.setState({customer: e.target.value})}
@@ -60,7 +62,7 @@ class NewVisit extends Component {
               Toolbox
             </label>
             <select
-              className="styled-select"
+              className="new-visit-select"
               name="toolbox"
               value={this.state.toolbox}
               onChange={e => this.setState({toolbox: e.target.value})}
@@ -81,7 +83,7 @@ class NewVisit extends Component {
               Worktrade?
             </label>
             <select
-              className="styled-select"
+              className="new-visit-select"
               name="worktrade"
               value={this.state.worktrade}
               onChange={e => this.setState({worktrade: e.target.value})}
@@ -91,6 +93,8 @@ class NewVisit extends Component {
               <option>flase</option>
             </select>
           </div>
+
+        </div>
 
           <div className="input-group">
             <label
@@ -104,21 +108,6 @@ class NewVisit extends Component {
               type="text"
               value={this.state.reason}
               onChange={e => this.setState({reason: e.target.value})}
-            />
-          </div>
-
-          <div className="input-group">
-            <label
-              htmlFor="departed"
-              style={{color: "#18d369", letterSpacing: ".05rem"}}>
-              Departed
-            </label>
-            <input
-              className="form-input"
-              name="departed"
-              type="date"
-              value={this.state.departed}
-              onChange={e => this.setState({departed: e.target.value})}
             />
           </div>
 

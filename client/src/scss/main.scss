@@ -375,7 +375,7 @@ body {
     }
   }
 
-  /* New shift */
+  /* New shift + New vist*/
   .new-shift-submit, .new-visit-submit {
     color: $background;
     letter-spacing: 1px;
@@ -398,6 +398,23 @@ body {
       width: 100%;
       margin-top: 1rem;
       margin-bottom: 4rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .new-visit-selects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .new-visit-select {
+      display: block;
+      background-color: transparent;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
 
       &:focus {
         outline: none;

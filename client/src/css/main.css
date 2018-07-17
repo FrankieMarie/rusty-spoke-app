@@ -234,7 +234,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* New shift */
+  /* New shift + New vist*/
   /* Customers */
   /* Staff */
   /* Holds + Current Visits + Shifts */
@@ -310,6 +310,17 @@ body {
       margin-top: 1rem;
       margin-bottom: 4rem; }
       .content .new-shift-staff-selects .new-shift-select:focus {
+        outline: none; }
+  .content .new-visit-selects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    .content .new-visit-selects .new-visit-select {
+      display: block;
+      background-color: transparent;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+      .content .new-visit-selects .new-visit-select:focus {
         outline: none; }
   .content .all-customers {
     display: flex;

@@ -46,6 +46,7 @@ class NewShift extends Component {
               Float Start
             </label>
             <input
+              className="form-input"
               name="floatStart"
               type="number"
               value={this.state.floatStart}
@@ -55,7 +56,7 @@ class NewShift extends Component {
 
           <div className="new-shift-staff-selects">
 
-            <div className=" input-group">
+            <div className="input-group">
               <label
                 htmlFor="one"
                 style={{color: "#18d369", letterSpacing: ".05rem"}}>

@@ -5,7 +5,8 @@ import {
   GET_ERRORS,
   DELETE_HOLD,
   EDIT_HOLD,
-  GET_HOLD_BY_ID
+  GET_HOLD_BY_ID,
+  NEW_HOLD
 } from './types'
 
 // Get all holds
@@ -31,6 +32,24 @@ export const setHoldsLoading = () => {
   return {
     type: HOLDS_LOADING
   }
+}
+
+// New hold
+export const newHold = (hold, history) => dispatch => {
+  axios.post('http://localhost:5000/api/holds', hold)
+    .then(res => {
+      dispatch({
+        type: NEW_HOLD,
+        payload: res.data
+      })
+      history.push('/holds')
+    })
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: {}
+      })
+    )
 }
 
 // Get hold by id

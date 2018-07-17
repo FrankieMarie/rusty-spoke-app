@@ -7,7 +7,7 @@ class Comment extends Component {
     return (
       <div className="comment-container">
         <p>{author.name}</p>
-        <small>{moment(date).format('MMMM D, YYYY, H:mm a')}</small>
+        <p>{moment(date).format('MMMM D, YYYY, H:mm a')}</p>
         <p>{resource.name}</p>
         <p className="comment-body">{body}</p>
       </div>

@@ -8,7 +8,6 @@ class EditVisit extends Component {
     reason: '',
     toolbox: '',
     worktrade: '',
-    departed: Date.now(),
     errors: {}
   }
 
@@ -26,13 +25,11 @@ class EditVisit extends Component {
       visit.reason = !isEmpty(visit.reason) ? visit.reason : ''
       visit.toolbox = !isEmpty(visit.toolbox) ? visit.toolbox : ''
       visit.worktrade = !isEmpty(visit.worktrade) ? visit.worktrade : ''
-      visit.departed = !isEmpty(visit.departed) ? visit.departed : Date.now()
       // set state
       this.setState({
         reason: visit.reason,
         toolbox: visit.toolbox,
-        worktrade: visit.worktrade,
-        departed: visit.departed
+        worktrade: visit.worktrade
       })
     }
   }
@@ -42,8 +39,7 @@ class EditVisit extends Component {
     const visitData = {
       reason: this.state.reason,
       toolbox: this.state.toolbox,
-      worktrade: this.state.worktrade,
-      departed: this.state.departed
+      worktrade: this.state.worktrade
     }
     this.props.editVisit(this.props.match.params.id, visitData, this.props.history)
   }

@@ -558,6 +558,42 @@ body {
           transform: scale(1.1); }
         .content .hold .shift-btns .shift-edit:focus, .content .visit .shift-btns .shift-edit:focus, .content .shift .shift-btns .shift-edit:focus, .content .purchase .shift-btns .shift-edit:focus, .content .staff .shift-btns .shift-edit:focus {
           outline: none; }
+    .content .hold .visit-btns, .content .visit .visit-btns, .content .shift .visit-btns, .content .purchase .visit-btns, .content .staff .visit-btns {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      place-items: end; }
+      .content .hold .visit-btns .visit-edit, .content .visit .visit-btns .visit-edit, .content .shift .visit-btns .visit-edit, .content .purchase .visit-btns .visit-edit, .content .staff .visit-btns .visit-edit {
+        grid-column: 3;
+        font-size: 1.2rem;
+        background-color: #18d369;
+        color: #222022;
+        text-decoration: none;
+        border: 1px solid #18d369;
+        border-radius: 100px;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        letter-spacing: .025rem;
+        transition: all .2s ease-in-out; }
+        .content .hold .visit-btns .visit-edit:hover, .content .visit .visit-btns .visit-edit:hover, .content .shift .visit-btns .visit-edit:hover, .content .purchase .visit-btns .visit-edit:hover, .content .staff .visit-btns .visit-edit:hover {
+          transform: scale(1.1); }
+        .content .hold .visit-btns .visit-edit:focus, .content .visit .visit-btns .visit-edit:focus, .content .shift .visit-btns .visit-edit:focus, .content .purchase .visit-btns .visit-edit:focus, .content .staff .visit-btns .visit-edit:focus {
+          outline: none; }
+      .content .hold .visit-btns .customer-departed, .content .visit .visit-btns .customer-departed, .content .shift .visit-btns .customer-departed, .content .purchase .visit-btns .customer-departed, .content .staff .visit-btns .customer-departed {
+        grid-column: 4;
+        font-size: 1.2rem;
+        background-color: #222022;
+        color: #18d369;
+        text-decoration: none;
+        border: 1px solid #222022;
+        border-radius: 100px;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        letter-spacing: .025rem;
+        transition: all .2s ease-in-out; }
+        .content .hold .visit-btns .customer-departed:hover, .content .visit .visit-btns .customer-departed:hover, .content .shift .visit-btns .customer-departed:hover, .content .purchase .visit-btns .customer-departed:hover, .content .staff .visit-btns .customer-departed:hover {
+          transform: scale(1.1); }
+        .content .hold .visit-btns .customer-departed:focus, .content .visit .visit-btns .customer-departed:focus, .content .shift .visit-btns .customer-departed:focus, .content .purchase .visit-btns .customer-departed:focus, .content .staff .visit-btns .customer-departed:focus {
+          outline: none; }
   .content .edit-hold-btn {
     left: 50%;
     transform: translate(-50%, -50%);
@@ -675,21 +711,21 @@ body {
     margin: 2rem 4rem; }
     .content .all-comments .h2s {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 4rem;
+      grid-template-columns: repeat(5, 1fr);
       margin-bottom: 2rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid #ceccce;
       color: #4c4947; }
     .content .all-comments .comment-container {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 4rem;
+      grid-template-columns: repeat(5, 1fr);
       margin-bottom: 1rem;
       padding-bottom: .5rem;
       border-bottom: 1px dotted #18d369;
       font-size: 1.2rem;
       color: #222022; }
+      .content .all-comments .comment-container .comment-body {
+        grid-column: 4 / span 5; }
   .content .comments-footer {
     max-height: 30vh; }
     .content .comments-footer .post-comment-h3 {
@@ -753,5 +789,7 @@ body {
         transition: all .2s ease-in-out; }
         .content .comments-footer .comment-form .new-comment-btn:hover {
           transform: scale(1.1); }
+        .content .comments-footer .comment-form .new-comment-btn:focus {
+          outline: none; }
   .content .purchase-footer {
     margin-top: 4rem; }

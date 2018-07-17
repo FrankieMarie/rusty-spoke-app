@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getAllCustomers } from '../../redux/actions/customerActions'
+import { newHold } from '../../redux/actions/holdsActions'
 
 class NewHold extends Component {
   state = {
@@ -16,6 +17,7 @@ class NewHold extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    this.props.newHold(this.state, this.props.history)
   }
 
   render() {
@@ -105,4 +107,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 })
 
-export default connect(mapStateToProps, { getAllCustomers })(NewHold)
+export default connect(mapStateToProps, { getAllCustomers, newHold })(NewHold)

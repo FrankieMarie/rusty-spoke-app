@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 import moment from 'moment'
 
 class CurrentVisit extends Component {
+
+  handleClick = (e) => {
+    console.log('clicked')
+  }
   render() {
     const { customer, arrived, departed, reason, worktrade, toolbox, _id } = this.props.visit
     if(!departed){
@@ -46,9 +50,10 @@ class CurrentVisit extends Component {
             </p>
           </li>
 
-          <div className="shift-btns">
-          <a href={`/edit-visit/${_id}`} className="shift-edit"><i className="fas fa-pencil-alt"></i> Edit Visit</a>
-        </div>
+          <div className="visit-btns">
+            <a href={`/edit-visit/${_id}`} className="visit-edit"><i className="fas fa-pencil-alt"></i> Edit Visit</a>
+            <button className="customer-departed" onClick={this.handleClick.bind(this)}>Depart</button>
+          </div>
 
         </ul>
       </div>

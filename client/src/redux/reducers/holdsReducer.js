@@ -3,7 +3,8 @@ import {
   HOLDS_LOADING,
   DELETE_HOLD,
   GET_HOLD_BY_ID,
-  EDIT_HOLD
+  EDIT_HOLD,
+  NEW_HOLD
 } from '../actions/types'
 
 const initialState = {
@@ -22,6 +23,11 @@ export default function(state = initialState, action) {
         ...state,
         holds: action.payload,
         loading: false
+      }
+    case NEW_HOLD:
+      return {
+        ...state,
+        hold: action.payload
       }
     case GET_HOLD_BY_ID:
       return {

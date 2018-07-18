@@ -5,9 +5,18 @@ import { logout } from '../redux/actions/authActions'
 import PropTypes from 'prop-types'
 
 class Header extends Component {
+  state = {
+    query: ''
+  }
+
   onLogoutClick(e) {
     e.preventDefault()
     this.props.logout()
+  }
+
+  handleSearch(e) {
+    e.preventDefault()
+
   }
 
   render() {
@@ -21,7 +30,7 @@ class Header extends Component {
               The Rusty Spoke
             </Link>
           </h1>
-          <form className="search">
+          <form className="search" onSubmit={this.handleSearch.bind(this)}>
             <input
               type="serch"
               className="search-input"

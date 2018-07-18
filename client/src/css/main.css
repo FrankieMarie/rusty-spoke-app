@@ -240,7 +240,8 @@ body {
   /* Holds + Current Visits + Shifts */
   /* Customer by id */
   /* Comments */
-  /* purchase-footer */ }
+  /* purchase-footer */
+  /* New Customer Form */ }
   .content .date-time {
     border: 2px solid #ceccce;
     border-radius: 10px;
@@ -722,7 +723,7 @@ body {
       margin-bottom: 1rem;
       padding-bottom: .5rem;
       border-bottom: 1px dotted #18d369;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       color: #222022; }
       .content .all-comments .comment-container .comment-body {
         grid-column: 4 / span 5; }
@@ -793,3 +794,36 @@ body {
           outline: none; }
   .content .purchase-footer {
     margin-top: 4rem; }
+  .content .new-customer-form {
+    margin: 2rem 20rem; }
+    .content .new-customer-form .new-customer-btn {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      background-color: #18d369;
+      color: white;
+      border: 1px solid #18d369;
+      border-radius: 100px;
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      transition: all .2s;
+      position: relative; }
+      .content .new-customer-form .new-customer-btn:hover {
+        transform: translateY(-3px); }
+      .content .new-customer-form .new-customer-btn::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        background-color: #18d369;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s; }
+      .content .new-customer-form .new-customer-btn:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0; }
+      .content .new-customer-form .new-customer-btn:focus {
+        outline: none; }

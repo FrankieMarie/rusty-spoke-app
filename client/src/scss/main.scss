@@ -975,7 +975,7 @@ body {
       margin-bottom: 1rem;
       padding-bottom: .5rem;
       border-bottom: 1px dotted $primary;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       color: $dark;
 
       .comment-body {
@@ -1082,4 +1082,51 @@ body {
   .purchase-footer {
     margin-top: 4rem;
   }
+
+  /* New Customer Form */
+  .new-customer-form {
+    margin: 2rem 20rem;
+
+    .new-customer-btn {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      background-color: $primary;
+      color: white;
+      border: 1px solid $primary;
+      border-radius: 100px;
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      transition: all .2s;
+      position: relative;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        background-color: $primary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+      }
+
+      &:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
 }

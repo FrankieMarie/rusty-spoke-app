@@ -25,14 +25,14 @@ class Shift extends Component {
         <li className="shift-item">
           <p className="shift-info">
             <small className="small">Float Start: </small>
-            <span className="shift-content">{floatStart}</span>
+            <span className="shift-content">$ {floatStart}</span>
           </p>
         </li>
 
         <li className="shift-item">
           <p className="shift-info">
             <small className="small">Float End: </small>
-            <span className="shift-content">{floatEnd}</span>
+            <span className="shift-content">$ {floatEnd}</span>
           </p>
         </li>
 

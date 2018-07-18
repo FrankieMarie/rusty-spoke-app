@@ -1,12 +1,18 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
+import { connect } from 'react-redux'
+import { editVisit } from '../../redux/actions/currentVisitsActions'
 
 class CurrentVisit extends Component {
+  state = {
+    departed: Date.now()
+  }
 
   handleClick = (e) => {
-    console.log('clicked')
+    this.props.editVisit(this.props.visit._id, this.state, this.props.history)
   }
+
   render() {
     const { customer, arrived, departed, reason, worktrade, toolbox, _id } = this.props.visit
     if(!departed){
@@ -66,4 +72,4 @@ class CurrentVisit extends Component {
   }
 }
 
-export default CurrentVisit
+export default connect(null, { editVisit })(CurrentVisit)

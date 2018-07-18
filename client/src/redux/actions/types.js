@@ -43,3 +43,5 @@ export const NEW_HOLD = 'NEW_HOLD'
 export const DELETE_HOLD = 'DELETE_HOLD'
 export const EDIT_HOLD = 'EDIT_HOLD'
 export const GET_HOLD_BY_ID = 'GET_HOLD_BY_ID'
+
+export const SEARCH_QUERY = 'SEARCH_QUERY'

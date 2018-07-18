@@ -23,50 +23,71 @@ class NewCustomer extends Component {
         <form onSubmit={this.handleSubmit.bind(this)} className="new-customer-form">
 
           <div className="input-group">
-            <label htmlFor="name">Full Name</label>
+            <label
+              htmlFor="name"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Full Name
+            </label>
             <input
               name="name"
               type="text"
-              className="new-customer-input"
+              className="form-input"
               value={this.state.name}
               onChange={e => this.setState({name: e.target.value})}
             />
           </div>
 
           <div className="input-group">
-          <label htmlFor="email">Email</label>
+          <label
+            htmlFor="email"
+            style={{color: "#18d369", letterSpacing: ".05rem"}}>
+            Email
+          </label>
           <input
             name="email"
             type="email"
-            className="new-customer-input"
+            className="form-input"
             value={this.state.email}
             onChange={e => this.setState({email: e.target.value})}
           />
           </div>
 
           <div className="input-group">
-            <label htmlFor="phone">Phone</label>
+            <label
+              htmlFor="phone"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Phone
+            </label>
             <input
               name="phone"
               type="text"
-              className="new-customer-input"
+              className="form-input"
               value={this.state.phone}
               onChange={e => this.setState({phone: e.target.value})}
             />
           </div>
 
           <div className="input-group">
-            <label htmlFor="workTradeHours">Work Trade Hours</label>
+            <label
+              htmlFor="workTradeHours"
+              style={{color: "#18d369", letterSpacing: ".05rem"}}>
+              Work Trade Hours
+            </label>
             <input
               name="workTradeHours"
               type="number"
-              className="new-customer-input"
+              className="form-input"
               value={this.state.workTradeHours}
               onChange={e => this.setState({workTradeHours: e.target.value})}
             />
           </div>
 
-          <button type="submit">Submit</button>
+          <button
+            type="submit"
+            className="new-customer-btn"
+            style={{cursor: "pointer"}}>
+            Submit
+          </button>
 
         </form>
       </div>
